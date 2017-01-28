@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "http://nekrut.github.io/lab-site/"
+baseurl = "http://nekrut.github.io/lab_site/"
 languageCode = "en-us"
 title = "AN LAB"
 theme = "hugo-highlights-theme"
