@@ -10,7 +10,7 @@ author = "Hugo Authors"
 
 |   |   |   |   |
 |:---:|:---:|:---:|:---:|
-| <img src="/images/daveb.jpg" alt="Dan"> | <button onclick="window.location.href = 'https://github.com/davebx';" class="btn-secondary">Dave Bouvier</button>    | <img src="/images/marten.jpg" alt="Martin"> | <button onclick="window.location.href = 'https://github.com/martenson';" class="btn-secondary">Marten Cech</button> |
+| <img src="images/daveb.jpg" alt="Dan"> | <button onclick="window.location.href = 'https://github.com/davebx';" class="btn-secondary">Dave Bouvier</button>    | <img src="/images/marten.jpg" alt="Martin"> | <button onclick="window.location.href = 'https://github.com/martenson';" class="btn-secondary">Marten Cech</button> |
 | <img src="/images/john.jpg" alt="John"> | <button onclick="window.location.href = 'https://github.com/jmchilton';" class="btn-secondary">John Chilton</button> | <img src="/images/nate.jpg" alt="Nate"> | <button onclick="window.location.href = 'https://github.com/natefoo';" class="btn-secondary">Nate Coraor</button> |
 | <img src="/images/han.jpg" alt="Han"> | <button onclick="window.location.href = 'http://bmb.psu.edu/directory/hzm5191';" class="btn-secondary">Han Mei</button> | <img src="/images/anton.jpg" alt="Anton"> | <button onclick="window.location.href = 'http://orcid.org/0000-0002-5987-8032';" class="btn-secondary">Anton Nekrutenko</button> |
 | | <img src="/images/nick.jpg" alt="Nick"> | <button onclick="window.location.href = 'https://github.com/NickSto';" class="btn-secondary">Nick Stoler</button> | |
