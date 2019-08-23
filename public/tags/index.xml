@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on AN lab</title>
-    <link>http://nekrut.bx.psu.edu/tags/</link>
+    <link>https://nekrut.github.io/lab_site/tags/</link>
     <description>Recent content in Tags on AN lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://nekrut.bx.psu.edu/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nekrut.github.io/lab_site/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>pBR322</title>
-      <link>http://nekrut.bx.psu.edu/tags/pbr322/</link>
+      <link>https://nekrut.github.io/lab_site/tags/pbr322/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://nekrut.bx.psu.edu/tags/pbr322/</guid>
+      <guid>https://nekrut.github.io/lab_site/tags/pbr322/</guid>
       <description></description>
     </item>
     
     <item>
       <title>plasmid</title>
-      <link>http://nekrut.bx.psu.edu/tags/plasmid/</link>
+      <link>https://nekrut.github.io/lab_site/tags/plasmid/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://nekrut.bx.psu.edu/tags/plasmid/</guid>
+      <guid>https://nekrut.github.io/lab_site/tags/plasmid/</guid>
       <description></description>
     </item>
     
     <item>
       <title>publications</title>
-      <link>http://nekrut.bx.psu.edu/tags/publications/</link>
+      <link>https://nekrut.github.io/lab_site/tags/publications/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://nekrut.bx.psu.edu/tags/publications/</guid>
+      <guid>https://nekrut.github.io/lab_site/tags/publications/</guid>
       <description></description>
     </item>
     

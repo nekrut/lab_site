@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>publications on AN lab</title>
-    <link>http://nekrut.bx.psu.edu/tags/publications/</link>
+    <link>https://nekrut.github.io/lab_site/tags/publications/</link>
     <description>Recent content in publications on AN lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Aug 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://nekrut.bx.psu.edu/tags/publications/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nekrut.github.io/lab_site/tags/publications/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Publications</title>
-      <link>http://nekrut.bx.psu.edu/publications/</link>
+      <link>https://nekrut.github.io/lab_site/publications/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://nekrut.bx.psu.edu/publications/</guid>
+      <guid>https://nekrut.github.io/lab_site/publications/</guid>
       <description>What Who Where Who cares?     Predicting runtimes of bioinformatics tools based on historical data: Five years of Galaxy usage. Tyryshkina A, Coraor N, Nekrutenko A. Bioinformatics. 2019    Child Weight Gain Trajectories Linked To Oral Microbiota Composition. Craig SJC, Blankenberg D, Parodi ACL, Paul IM, Birch LL, Savage JS, Marini ME, Stokes JL, Nekrutenko A, Reimherr M, Chiaromonte F, Makova KD. Sci Rep.</description>
     </item>
     

@@ -1,4 +1,4 @@
-baseURL = "http://nekrut.bx.psu.edu"
+baseURL = "https://nekrut.github.io/lab_site/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 title = "AN lab"
