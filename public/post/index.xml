@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on AN lab</title>
+    <link>http://nekrut.bx.psu.edu/post/</link>
+    <description>Recent content in Posts on AN lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://nekrut.bx.psu.edu/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>History of pBR322</title>
+      <link>http://nekrut.bx.psu.edu/pbr322_history/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://nekrut.bx.psu.edu/pbr322_history/</guid>
+      <description>We take cloning vectors for given but most people do not know their history. I&#39;m one of these people. Yet because we use pBR322 extensively, I wanted to know its origins. This is a condensed version of that investigation. Stanley Cohen and co-workers (Cohen et al. 1973) constructed first functional plasmids by transforming E. coli with fragments produced by treating R6-5 and pSC101 plasmids using Eco RI restriction enzyme. They effectively showed that functional extrachromosomal replicons can be obtained by joining plasmid DNA of completely different origins.</description>
+    </item>
+    
+  </channel>
+</rss>

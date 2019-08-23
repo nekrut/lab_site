@@ -1,229 +1,41 @@
-# Site settings
-baseurl = "https://nekrut.github.io/lab_site/"
+baseURL = "http://nekrut.bx.psu.edu"
 languageCode = "en-us"
-title = "AN LAB"
-theme = "hugo-highlights-theme"
+defaultContentLanguage = "en"
+title = "AN lab"
+theme = "papercss-hugo-theme"
+googleAnalytics = "UA-123456789-1"
 
-# Enter your tracking code to enable Google analytics
-googleAnalytics = ""
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[imaging]
+  quality = 99
 
 [params]
+  homeMetaContent = "A Hugo theme made with PaperCSS, the less formal CSS framework."
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "Jan 2, 2006"
+  homeText = "A part of Galaxy"
+  indexTitle = "AN Lab: A part of Galaxy"
 
-  # You can use Markdown for urls [text](//domain.tld/source)
-  #
-  # All icons using Fontawesom's icon font. Look at fortawesome.github.io/Font-Awesome/icons/
-  # for more icons.
-
-  # To provide more meta data for search engings feel free to add a few informations.
-  # This lines will be inserted as meta tags.
-  name = "Anton Nekrutenko"
-  description = "Nekrutenko Group at Penn State"
-
-  # For a static site it's not possible to provide a contact form. The contact form uses
-  # www.formspree.io as a proxy. The form makes a Post request to their servers to send an email
-  # Visitors can send up to a 1000 emails each month
-  #
-  # How to setup formspree
-  #
-  # - set your email address under 'email' below
-  # - upload the generated site to your server
-  # - send a dummy email to yourself to confirm your account
-  # - click the confirmation link in the email from www.formspree.io
-  # - That's all. Enjoy mailing!
-  #email = "your@mail.com"
-
-  # If this param is set to true, every section gets an own background image (located at static/images)
-  # to change the image you could use the param picture on every section.
-  # If it's disabled you could change the background to overwrite the bg.png and overlay.png to set the background.
-  backgroundpersection = true
-
-  # Hero Section
-  [params.hero]
-    title = "An LaB"
-    description = "A part of Galaxy"
-    buttontext = "start here"
-
-  # about section
-  [params.about]
-    enable = true
-    title = "Projects"
-    description = "**galaxyproject.org**<br>[Galaxy](http://usegalaxy.org) is an open, web-based platform for reproducible data intensive biomedical research.  It is developed and maintained jointly with [James Taylor](http://jamestaylor.org/)'s group at JHU and [Jeremy Goecks](http://goeckslab.org/)'s lab at OHSU. Our [main site](http://usegalaxy.org) performs [hundreds of thousands](https://wiki.galaxyproject.org/GalaxyProject/Statistics) of analyses monthly. [Numerous](https://new.galaxyproject.org/public-galaxy-servers/) institutions across the World run their own Galaxy instances. Members of our growing developer community from across the world [contribute](https://github.com/galaxyproject/galaxy/commits/dev) to Galaxy daily.<hr>**Mutation dynamics**<br>Next-Generation sequencing technologies allow detection of nucleotide changes present at *very* low frequencies. Unfortunately the signal is often obscured by noise. We are using cutting edge technologies such as [ddPCR](https://www.ncbi.nlm.nih.gov/pubmed/25313049) and [duplex sequencing](https://www.ncbi.nlm.nih.gov/pubmed/27566673) to overcome these challenges and understand mutational flicker. This work in performed in collaboration with [Kateryna Makova](http://www.bx.psu.edu/makova_lab/) at PSU."
-    buttontext = "next"
-    # the picture is stored at static/images/
-    picture = "m_tree.jpg"
-
-  # skill section
-  [params.skill_list]
-    enable = true
-    title = "Team"
-    description = "People from A (*B*) to Z (*S*)"
-    buttontext = "next"
-    # the picture is storead at static/images/
-    picture = "m_tree.jpg"
-
-    [[params.skills]]
-      icon = "dan.jpg"
-      title = "Dan Blankenberg"
-      link = "https://github.com/blankenberg"
-
-    [[params.skills]]
-      icon = "daveb.jpg"
-      title = "Dave Bouvier"
-      link ="https://github.com/davebx"
-
-    [[params.skills]]
-      icon = "marten.jpg"
-      title = "Martin Cech"
-      link = "https://github.com/martenson"
-
-    [[params.skills]]
-      icon = "john.jpg"
-      title = "John Chilton"
-      link = "https://github.com/jmchilton"
-
-    [[params.skills]]
-      icon = "nate.jpg"
-      title = "Nate Coraor"
-      link = "https://github.com/natefoo"
-
-    [[params.skills]]
-      icon = "jen.jpg"
-      title = "Jen Jackson"
-      link = "https://biostar.usegalaxy.org/u/254/"
-
-    [[params.skills]]
-      icon = "delphine.jpg"
-      title = "Delphine Lariviere"
-      link = "https://scholar.google.com/citations?user=ObqD_s4AAAAJ&hl=en"
-
-    [[params.skills]]
-      icon = "han.jpg"
-      title = "Han Mei"
-      link = "http://bmb.psu.edu/directory/hzm5191"
-
-    [[params.skills]]
-      icon = "anton.jpg"
-      title = "Anton Nekrutenko"
-      link = "http://orcid.org/0000-0002-5987-8032"
-
-    [[params.skills]]
-      icon = "nick.jpg"
-      title = "Nick Stoler"
-      link = "https://github.com/NickSto"
-
-  # output section
-  [params.output_list]
-    enable = true
-    title = "Output"
-    description = "What gets done (most of the time)"
-    buttontext = "next"
-    # the picture is storead at static/images/
-    picture = "m_tree.jpg"
-
-    [[params.output]]
-      icon = "fa-file-text-o"
-      title = "Papers"
-      link = "https://www.ncbi.nlm.nih.gov/pubmed/?term=%22nekrutenko+a%22%5Bauth%5D"
-
-    [[params.output]]
-      icon = "fa-github"
-      title = "Code"
-      link = "https://github.com/galaxyproject"
-
-    [[params.output]]
-      icon = "fa-info"
-      title = "Wiki"
-      link = "https://new.galaxyproject.org"
-
-    [[params.output]]
-      icon = "fa-twitter"
-      title = "Timeline"
-      link = "https://twitter.com/galaxyproject"
-
-    [[params.output]]
-      icon = "fa-vimeo"
-      title = "Videos"
-      link = "https://vimeo.com/galaxyproject"
-
-    [[params.output]]
-      icon = "fa-graduation-cap"
-      title = "Teaching"
-      link = "https://nekrut.github.io/BMMB554"
-
-    [[params.output]]
-      icon = "fa-beer"
-      title = "Events"
-      link = "https://new.galaxyproject.org/events/"
-
-    [[params.output]]
-      icon = "fa-book"
-      title = "Documentation"
-      link = "https://galaxy.readthedocs.io/en/master/index.html"
-
-  # infos section
-  [params.infos]
-    enable = true
-    title = "Coordinates"
-    description = "We are located on Penn State University Campus:<br>**505 Wartik Lab**<br>University Park, PA<br>16802<hr>[![](images/map.png)](https://goo.gl/maps/M6yPuzpq1v32)"
-
-    # the picture is storead at static/images/
-    picture = "m_tree.jpg"
-
-
-    [[params.pub]]
-    link = "https://www.ncbi.nlm.nih.gov/pubmed/15057822"
-
-     [[params.pub]]
-    link = "https://www.ncbi.nlm.nih.gov/pubmed/15057822"
-
-  # footer section
-  # this section includes
-  #
-  # - the contact form
-  # - social icons
-  #
-  # It's possible to disable the whole footer or disable only social icons or contact form
-
-  [params.footer]
-    enable = true
-    title = "Get in Touch"
-
-    # contact form
-    [params.footer.contact]
-      #enable = true
-
-    [params.footer.contact.form]
-      name = "Name"
-      email = "Your Email"
-      message = "Your Message"
-      buttontext = "send message"
-
-    # social icons
-    [params.footer.social_list]
-      enable = true
-
-      [[params.footer.social]]
-        title = "Twitter"
-        icon = "fa-twitter"
-        link = "http://twitter.com/galaxyproject"
-
-      [[params.footer.social]]
-        title = "Github"
-        icon = "fa-github"
-        link = "http://github.com/galaxyproject"
-
-      [[params.footer.social]]
-        title = "Vimeo"
-        icon = "fa-vimeo"
-        link = "http://vimeo.com/galaxyproject"
-
-      [[params.footer.social]]
-        title = "Email"
-        icon = "fa-envelope"
-        link = "mailto:aun1@psu.edu?subject=from_an_lab_site"
-
-    # copyright
-    #[params.footer.copyright.notice]
-
-      [[params.footer.copyright.notice]]
-        text = "© Группировка Некрутенко | Backround: [Gray Tree](https://en.wikipedia.org/wiki/Gray_Tree) by Piet Mondrian"
+[menu]
+  [[menu.nav]]
+    name = "Galaxy"
+    url = "http://galaxyproject.org"
+    weight = 1
+  [[menu.nav]]
+    name = "People"
+    url = "/people/"
+    weight = 2
+  [[menu.nav]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 3
+  [[menu.nav]]
+    name = "Blog"
+    url = "/post/"
+    weight = 4
+  
