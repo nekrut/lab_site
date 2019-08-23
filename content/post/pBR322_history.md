@@ -17,7 +17,7 @@ Subsequently Bolivar and Rodriguez created (<kbd>B</kbd> and <kbd>R</kbd> of <kb
 
 
 <div class="card">
-  <img src="/images/pbr322.png" alt="Card example image">
+  <img src="/lab_site/images/pbr322.png" alt="Card example image">
 
   <div class="card-body">
     <h4 class="card-title">Graphical history of pBR322 by <a href="http://dx.doi.org/10.1101/SQB.1979.043.01.013">Sutcliffe 1979</a></h4>
