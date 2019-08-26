@@ -21,9 +21,9 @@ author = "Hugo Authors"
 <div class="row flex-center">
   <div class="col-4 col"><button onclick="window.location.href = 'https://bio.jhu.edu/directory/james-taylor/';" class="btn-warning">James Taylor<br>Johns Hopkins</button> </div>
   <div class="col-4 col"><button onclick="window.location.href = 'https://bio.psu.edu/directory/kdm16/';" class="btn-warning">Kateryna Makova<br>Penn State</button></div>
-  <div class="col-4 col"><button onclick="window.location.href = 'https://bio.cst.temple.edu/people/';" class="btn-warning">Sergei Koskovsky Pond <br>Temple</button> </div>
+  <div class="col-4 col"><button onclick="window.location.href = 'https://bio.cst.temple.edu/people/';" class="btn-warning">Sergei Kosakovsky Pond <br>Temple</button> </div>
 </div>
 <div class="row flex-center">
   <div class="col-4 col"><button onclick="window.location.href = 'https://www.lerner.ccf.org/gmi/blankenberg/';" class="btn-warning">Daniel Blankenberg<br>Cleveland Clinic</button></div>
-  <div class="col-4 col"><button onclick="window.location.href = 'https://goeckslab.org/';" class="btn-warning">Jeremy Goecks<br>OSHU</button> </div>
+  <div class="col-4 col"><button onclick="window.location.href = 'https://goeckslab.org/';" class="btn-warning">Jeremy Goecks<br>OHSU</button> </div>
 </div>
