@@ -139,6 +139,16 @@ Author: Anton
           </a>
         </li>
       
+        <li>
+          
+          
+          
+          
+          <a href="#appendix-freebayes-vcf-tags">
+            Appendix: FreeBayes VCF tags
+          </a>
+        </li>
+      
     </ol>
   </div>
 </div>
@@ -195,7 +205,7 @@ K03455.1        2911    .       ATG     ACG     10482.7 .       AB=0;ABP=0;AC=0;
 K03455.1        2911    .       ATG     ATA     10482.7 .       AB=0;ABP=0;AC=0;AF=0;AN=2;AO=2;CIGAR=2M1X;DP=316;DPB=316;DPRA=0;EPP=3.0103;EPPR=0;GTI=0;LEN=1;MEANALT=5;MQM=60;MQMR=0;NS=1;NUMALT=5;ODDS=413.347;PAIRED=1;PAIREDR=0;PAO=0;PQA=0;PQR=0;PRO=0;QA=72;QR=0;RO=0;RPL=2;RPP=7.35324;RPPR=0;RPR=0;RUN=1;SAF=1;SAP=3.0103;SAR=1;SRF=0;SRP=0;SRR=0;TYPE=snp      GT:DP:AD:RO:QR:AO:QA:GL ./.:316:0,1,2,310,1,2:0:0:2:72:-1054.34,-1048.47,-1047.87
 </code></pre>
 
-<p>looking at VCFs is truly a unique form of a cruel punishment, so let&rsquo;s take a closer look at <code>INFO</code>- and <code>FORMAT</code>- level fields. This can be done through a combination of <code>vcfbreakmulti</code>, <code>vcf2tsv</code> (another utility from <code>vcflib</code> package that converts VCF into tab-delimited data), <a href="https://www.gnu.org/software/datamash/manual/datamash.html#Transpose"><code>datamash</code></a> <code>traspose</code> function:</p>
+<p>looking at VCFs is truly a unique form of a cruel punishment, so let&rsquo;s take a closer look at <code>INFO</code>- and <code>FORMAT</code>- level fields. This can be done through a combination of <code>vcfbreakmulti</code>, <code>vcf2tsv</code> (another utility from <code>vcflib</code> package that converts VCF into tab-delimited data), <a href="https://www.gnu.org/software/datamash/manual/datamash.html#Transpose"><code>datamash</code></a> <code>transpose</code> function (<code>freebayes</code> tags are descriubed in the <a href="#appendix-freebayes-vcf-tags">appendix</a>):</p>
 
 <pre><code>cat &lt;VCF file&gt; | vcfbreakmulti | vcf2tsv | datamash transpose
 </code></pre>
@@ -1324,7 +1334,7 @@ Note the <tt>-SMA</tt> flag, which tells the tool to split multiallelic sites. T
 <ul>
 <li><code>vcftools</code> is perhaps the easiest way to do this because it does not require <em>a priori</em> knowledge of all the fields in the VCF file - it just parses them all. However, in some instances <code>vcfbreakmulti</code> was hanging on certain files that contain variants with large number of alternative alleles (low complexity regions). This is intermittent: sometimes it hangs and sometimes it does not (I wasn&rsquo;t able to pinpoint the exact cause). It is really straightforward to pipe from one <code>vcflib</code> utility to another.</li>
 <li><code>gatk</code>&rsquo;s <code>VariantsToTable</code> is one command that does both things - splits multiallelic sites and converts to tab-delimited format. The challenge is forming the correct command line with all VCF flags to extract. Piping is a little weird with <code>gatk</code> as you need to explicitly state <code>-O /dev/stdout</code>.</li>
-<li><code>bcftools</code> requites the use of two utilities and also forces the user to construct the list of fields and formatting options. Just like in the case of <code>vcflib</code> piping is easy.</li>
+<li><code>bcftools</code> requires the use of two utilities and also forces the user to construct the list of fields and formatting options. Just like in the case of <code>vcflib</code> piping is easy.</li>
 </ul>
 
 <h3 id="project-health">Project health</h3>
@@ -1374,6 +1384,392 @@ Note the <tt>-SMA</tt> flag, which tells the tool to split multiallelic sites. T
 </table>
 
 <p>Based on this <code>bcftools</code> is probably the best option as it is well maintained and is not written in java ;).</p>
+
+<h2 id="appendix-freebayes-vcf-tags">Appendix: FreeBayes VCF tags</h2>
+
+<table>
+<thead>
+<tr>
+<th><h4>Tag</h4></th>
+<th><h4>Number</h4></th>
+<th><h4>Type</h4></th>
+<th><h4>Description</h4></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>NS</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Number of samples with data</td>
+</tr>
+
+<tr>
+<td><code>DP</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Total read depth at the locus</td>
+</tr>
+
+<tr>
+<td><code>DPB</code></td>
+<td>1</td>
+<td>Float</td>
+<td>Total read depth per bp at the locus; bases in reads overlapping / bases in haplotype</td>
+</tr>
+
+<tr>
+<td><code>AC</code></td>
+<td>A</td>
+<td>Integer</td>
+<td>Total number of alternate alleles in called genotypes</td>
+</tr>
+
+<tr>
+<td><code>AN</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Total number of alleles in called genotypes</td>
+</tr>
+
+<tr>
+<td><code>AF</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Estimated allele frequency in the range (01]</td>
+</tr>
+
+<tr>
+<td><code>RO</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Count of full observations of the reference haplotype.</td>
+</tr>
+
+<tr>
+<td><code>AO</code></td>
+<td>A</td>
+<td>Integer</td>
+<td>Count of full observations of this alternate haplotype.</td>
+</tr>
+
+<tr>
+<td><code>PRO</code></td>
+<td>1</td>
+<td>Float</td>
+<td>Reference allele observation count with partial observations recorded fractionally</td>
+</tr>
+
+<tr>
+<td><code>PAO</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Alternate allele observations with partial observations recorded fractionally</td>
+</tr>
+
+<tr>
+<td><code>QR</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Reference allele quality sum in phred</td>
+</tr>
+
+<tr>
+<td><code>QA</code></td>
+<td>A</td>
+<td>Integer</td>
+<td>Alternate allele quality sum in phred</td>
+</tr>
+
+<tr>
+<td><code>PQR</code></td>
+<td>1</td>
+<td>Float</td>
+<td>Reference allele quality sum in phred for partial observations</td>
+</tr>
+
+<tr>
+<td><code>PQA</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Alternate allele quality sum in phred for partial observations</td>
+</tr>
+
+<tr>
+<td><code>SRF</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Number of reference observations on the forward strand</td>
+</tr>
+
+<tr>
+<td><code>SRR</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Number of reference observations on the reverse strand</td>
+</tr>
+
+<tr>
+<td><code>SAF</code></td>
+<td>A</td>
+<td>Integer</td>
+<td>Number of alternate observations on the forward strand</td>
+</tr>
+
+<tr>
+<td><code>SAR</code></td>
+<td>A</td>
+<td>Integer</td>
+<td>Number of alternate observations on the reverse strand</td>
+</tr>
+
+<tr>
+<td><code>SRP</code></td>
+<td>1</td>
+<td>Float</td>
+<td>Strand balance probability for the reference allele: Phred-scaled upper-bounds estimate of the probability of observing the deviation between SRF and SRR given E(SRF/SRR) ~ 0.5 derived using Hoeffding&rsquo;s inequality</td>
+</tr>
+
+<tr>
+<td><code>SAP</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Strand balance probability for the alternate allele: Phred-scaled upper-bounds estimate of the probability of observing the deviation between SAF and SAR given E(SAF/SAR) ~ 0.5 derived using Hoeffding&rsquo;s inequality</td>
+</tr>
+
+<tr>
+<td><code>AB</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Allele balance at heterozygous sites: a number between 0 and 1 representing the ratio of reads showing the reference allele to all reads considering only reads from individuals called as heterozygous</td>
+</tr>
+
+<tr>
+<td><code>ABP</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Allele balance probability at heterozygous sites: Phred-scaled upper-bounds estimate of the probability of observing the deviation between ABR and ABA given E(ABR/ABA) ~ 0.5 derived using Hoeffding&rsquo;s inequality</td>
+</tr>
+
+<tr>
+<td><code>RUN</code></td>
+<td>A</td>
+<td>Integer</td>
+<td>Run length: the number of consecutive repeats of the alternate allele in the reference genome</td>
+</tr>
+
+<tr>
+<td><code>RPP</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Read Placement Probability: Phred-scaled upper-bounds estimate of the probability of observing the deviation between RPL and RPR given E(RPL/RPR) ~ 0.5 derived using Hoeffding&rsquo;s inequality</td>
+</tr>
+
+<tr>
+<td><code>RPPR</code></td>
+<td>1</td>
+<td>Float</td>
+<td>Read Placement Probability for reference observations: Phred-scaled upper-bounds estimate of the probability of observing the deviation between RPL and RPR given E(RPL/RPR) ~ 0.5 derived using Hoeffding&rsquo;s inequality</td>
+</tr>
+
+<tr>
+<td><code>RPL</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Reads Placed Left: number of reads supporting the alternate balanced to the left (5&rsquo;) of the alternate allele</td>
+</tr>
+
+<tr>
+<td><code>RPR</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Reads Placed Right: number of reads supporting the alternate balanced to the right (3&rsquo;) of the alternate allele</td>
+</tr>
+
+<tr>
+<td><code>EPP</code></td>
+<td>A</td>
+<td>Float</td>
+<td>End Placement Probability: Phred-scaled upper-bounds estimate of the probability of observing the deviation between EL and ER given E(EL/ER) ~ 0.5 derived using Hoeffding&rsquo;s inequality</td>
+</tr>
+
+<tr>
+<td><code>EPPR</code></td>
+<td>1</td>
+<td>Float</td>
+<td>End Placement Probability for reference observations: Phred-scaled upper-bounds estimate of the probability of observing the deviation between EL and ER given E(EL/ER) ~ 0.5 derived using Hoeffding&rsquo;s inequality</td>
+</tr>
+
+<tr>
+<td><code>DPRA</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Alternate allele depth ratio.  Ratio between depth in samples with each called alternate allele and those without.</td>
+</tr>
+
+<tr>
+<td><code>ODDS</code></td>
+<td>1</td>
+<td>Float</td>
+<td>The log odds ratio of the best genotype combination to the second-best.</td>
+</tr>
+
+<tr>
+<td><code>GTI</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Number of genotyping iterations required to reach convergence or bailout.</td>
+</tr>
+
+<tr>
+<td><code>TYPE</code></td>
+<td>A</td>
+<td>String</td>
+<td>The type of allele either snp mnp ins del or complex.</td>
+</tr>
+
+<tr>
+<td><code>CIGAR</code></td>
+<td>A</td>
+<td>String</td>
+<td>The extended CIGAR representation of each alternate allele with the exception that &lsquo;=&rsquo; is replaced by &rsquo;M&rsquo; to ease VCF parsing.  Note that INDEL alleles do not have the first matched base (which is provided by default per the spec) referred to by the CIGAR.</td>
+</tr>
+
+<tr>
+<td><code>NUMALT</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Number of unique non-reference alleles in called genotypes at this position.</td>
+</tr>
+
+<tr>
+<td><code>MEANALT</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Mean number of unique non-reference allele observations per sample with the corresponding alternate alleles.</td>
+</tr>
+
+<tr>
+<td><code>LEN</code></td>
+<td>A</td>
+<td>Integer</td>
+<td>allele length</td>
+</tr>
+
+<tr>
+<td><code>MQM</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Mean mapping quality of observed alternate alleles</td>
+</tr>
+
+<tr>
+<td><code>MQMR</code></td>
+<td>1</td>
+<td>Float</td>
+<td>Mean mapping quality of observed reference alleles</td>
+</tr>
+
+<tr>
+<td><code>PAIRED</code></td>
+<td>A</td>
+<td>Float</td>
+<td>Proportion of observed alternate alleles which are supported by properly paired read fragments</td>
+</tr>
+
+<tr>
+<td><code>PAIREDR</code></td>
+<td>1</td>
+<td>Float</td>
+<td>Proportion of observed reference alleles which are supported by properly paired read fragments</td>
+</tr>
+
+<tr>
+<td><code>MIN_DP</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Minimum depth in gVCF output block.</td>
+</tr>
+
+<tr>
+<td><code>END</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Last position (inclusive) in gVCF output record.</td>
+</tr>
+
+<tr>
+<td><code>GT</code></td>
+<td>1</td>
+<td>String</td>
+<td>Genotype</td>
+</tr>
+
+<tr>
+<td><code>GQ</code></td>
+<td>1</td>
+<td>Float</td>
+<td>Genotype Quality the Phred-scaled marginal (or unconditional) probability of the called genotype</td>
+</tr>
+
+<tr>
+<td><code>GL</code></td>
+<td>G</td>
+<td>Float</td>
+<td>Genotype Likelihood log10-scaled likelihoods of the data given the called genotype for each possible genotype generated from the reference and alternate alleles given the sample ploidy</td>
+</tr>
+
+<tr>
+<td><code>DP</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Read Depth</td>
+</tr>
+
+<tr>
+<td><code>AD</code></td>
+<td>R</td>
+<td>Integer</td>
+<td>Number of observation for each allele</td>
+</tr>
+
+<tr>
+<td><code>RO</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Reference allele observation count</td>
+</tr>
+
+<tr>
+<td><code>QR</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Sum of quality of the reference observations</td>
+</tr>
+
+<tr>
+<td><code>AO</code></td>
+<td>A</td>
+<td>Integer</td>
+<td>Alternate allele observation count</td>
+</tr>
+
+<tr>
+<td><code>QA</code></td>
+<td>A</td>
+<td>Integer</td>
+<td>Sum of quality of the alternate observations</td>
+</tr>
+
+<tr>
+<td><code>MIN_DP</code></td>
+<td>1</td>
+<td>Integer</td>
+<td>Minimum depth in gVCF output block.</td>
+</tr>
+</tbody>
+</table>
 
   
 

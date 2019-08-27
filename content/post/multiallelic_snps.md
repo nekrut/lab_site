@@ -52,7 +52,7 @@ K03455.1        2911    .       ATG     ACG     10482.7 .       AB=0;ABP=0;AC=0;
 K03455.1        2911    .       ATG     ATA     10482.7 .       AB=0;ABP=0;AC=0;AF=0;AN=2;AO=2;CIGAR=2M1X;DP=316;DPB=316;DPRA=0;EPP=3.0103;EPPR=0;GTI=0;LEN=1;MEANALT=5;MQM=60;MQMR=0;NS=1;NUMALT=5;ODDS=413.347;PAIRED=1;PAIREDR=0;PAO=0;PQA=0;PQR=0;PRO=0;QA=72;QR=0;RO=0;RPL=2;RPP=7.35324;RPPR=0;RPR=0;RUN=1;SAF=1;SAP=3.0103;SAR=1;SRF=0;SRP=0;SRR=0;TYPE=snp      GT:DP:AD:RO:QR:AO:QA:GL ./.:316:0,1,2,310,1,2:0:0:2:72:-1054.34,-1048.47,-1047.87
 ```
 
-looking at VCFs is truly a unique form of a cruel punishment, so let's take a closer look at `INFO`- and `FORMAT`- level fields. This can be done through a combination of `vcfbreakmulti`, `vcf2tsv` (another utility from `vcflib` package that converts VCF into tab-delimited data), [`datamash`](https://www.gnu.org/software/datamash/manual/datamash.html#Transpose) `traspose` function:
+looking at VCFs is truly a unique form of a cruel punishment, so let's take a closer look at `INFO`- and `FORMAT`- level fields. This can be done through a combination of `vcfbreakmulti`, `vcf2tsv` (another utility from `vcflib` package that converts VCF into tab-delimited data), [`datamash`](https://www.gnu.org/software/datamash/manual/datamash.html#Transpose) `transpose` function (`freebayes` tags are descriubed in the [appendix](#appendix-freebayes-vcf-tags)):
 
 ```
 cat <VCF file> | vcfbreakmulti | vcf2tsv | datamash transpose
@@ -227,7 +227,7 @@ The three approaches, `vcflib`, `gatk`, and `bcftools` all achieve the same resu
 
  - `vcftools` is perhaps the easiest way to do this because it does not require *a priori* knowledge of all the fields in the VCF file - it just parses them all. However, in some instances `vcfbreakmulti` was hanging on certain files that contain variants with large number of alternative alleles (low complexity regions). This is intermittent: sometimes it hangs and sometimes it does not (I wasn't able to pinpoint the exact cause). It is really straightforward to pipe from one `vcflib` utility to another. 
  - `gatk`'s `VariantsToTable` is one command that does both things - splits multiallelic sites and converts to tab-delimited format. The challenge is forming the correct command line with all VCF flags to extract. Piping is a little weird with `gatk` as you need to explicitly state `-O /dev/stdout`.
- - `bcftools` requites the use of two utilities and also forces the user to construct the list of fields and formatting options. Just like in the case of `vcflib` piping is easy.
+ - `bcftools` requires the use of two utilities and also forces the user to construct the list of fields and formatting options. Just like in the case of `vcflib` piping is easy.
 
 ### Project health
 
@@ -241,6 +241,64 @@ Here is a simple GitHub-based statistics (as of August 27, 2018):
 
 
 Based on this `bcftools` is probably the best option as it is well maintained and is not written in java ;). 
+
+## Appendix: FreeBayes VCF tags
+
+| <h4>Tag</h4> | <h4>Number</h4> | <h4>Type</h4> | <h4>Description</h4> |
+|-----|-----|-----|------|
+|`NS`|1|Integer|Number of samples with data|
+|`DP`|1|Integer|Total read depth at the locus|
+|`DPB`|1|Float|Total read depth per bp at the locus; bases in reads overlapping / bases in haplotype|
+|`AC`|A|Integer|Total number of alternate alleles in called genotypes|
+|`AN`|1|Integer|Total number of alleles in called genotypes|
+|`AF`|A|Float|Estimated allele frequency in the range (01]|
+|`RO`|1|Integer|Count of full observations of the reference haplotype.|
+|`AO`|A|Integer|Count of full observations of this alternate haplotype.|
+|`PRO`|1|Float|Reference allele observation count with partial observations recorded fractionally|
+|`PAO`|A|Float|Alternate allele observations with partial observations recorded fractionally|
+|`QR`|1|Integer|Reference allele quality sum in phred|
+|`QA`|A|Integer|Alternate allele quality sum in phred|
+|`PQR`|1|Float|Reference allele quality sum in phred for partial observations|
+|`PQA`|A|Float|Alternate allele quality sum in phred for partial observations|
+|`SRF`|1|Integer|Number of reference observations on the forward strand|
+|`SRR`|1|Integer|Number of reference observations on the reverse strand|
+|`SAF`|A|Integer|Number of alternate observations on the forward strand|
+|`SAR`|A|Integer|Number of alternate observations on the reverse strand|
+|`SRP`|1|Float|Strand balance probability for the reference allele: Phred-scaled upper-bounds estimate of the probability of observing the deviation between SRF and SRR given E(SRF/SRR) ~ 0.5 derived using Hoeffding's inequality|
+|`SAP`|A|Float|Strand balance probability for the alternate allele: Phred-scaled upper-bounds estimate of the probability of observing the deviation between SAF and SAR given E(SAF/SAR) ~ 0.5 derived using Hoeffding's inequality|
+|`AB`|A|Float|Allele balance at heterozygous sites: a number between 0 and 1 representing the ratio of reads showing the reference allele to all reads considering only reads from individuals called as heterozygous|
+|`ABP`|A|Float|Allele balance probability at heterozygous sites: Phred-scaled upper-bounds estimate of the probability of observing the deviation between ABR and ABA given E(ABR/ABA) ~ 0.5 derived using Hoeffding's inequality|
+|`RUN`|A|Integer|Run length: the number of consecutive repeats of the alternate allele in the reference genome|
+|`RPP`|A|Float|Read Placement Probability: Phred-scaled upper-bounds estimate of the probability of observing the deviation between RPL and RPR given E(RPL/RPR) ~ 0.5 derived using Hoeffding's inequality|
+|`RPPR`|1|Float|Read Placement Probability for reference observations: Phred-scaled upper-bounds estimate of the probability of observing the deviation between RPL and RPR given E(RPL/RPR) ~ 0.5 derived using Hoeffding's inequality|
+|`RPL`|A|Float|Reads Placed Left: number of reads supporting the alternate balanced to the left (5') of the alternate allele|
+|`RPR`|A|Float|Reads Placed Right: number of reads supporting the alternate balanced to the right (3') of the alternate allele|
+|`EPP`|A|Float|End Placement Probability: Phred-scaled upper-bounds estimate of the probability of observing the deviation between EL and ER given E(EL/ER) ~ 0.5 derived using Hoeffding's inequality|
+|`EPPR`|1|Float|End Placement Probability for reference observations: Phred-scaled upper-bounds estimate of the probability of observing the deviation between EL and ER given E(EL/ER) ~ 0.5 derived using Hoeffding's inequality|
+|`DPRA`|A|Float|Alternate allele depth ratio.  Ratio between depth in samples with each called alternate allele and those without.|
+|`ODDS`|1|Float|The log odds ratio of the best genotype combination to the second-best.|
+|`GTI`|1|Integer|Number of genotyping iterations required to reach convergence or bailout.|
+|`TYPE`|A|String|The type of allele either snp mnp ins del or complex.|
+|`CIGAR`|A|String|The extended CIGAR representation of each alternate allele with the exception that '=' is replaced by 'M' to ease VCF parsing.  Note that INDEL alleles do not have the first matched base (which is provided by default per the spec) referred to by the CIGAR.|
+|`NUMALT`|1|Integer|Number of unique non-reference alleles in called genotypes at this position.|
+|`MEANALT`|A|Float|Mean number of unique non-reference allele observations per sample with the corresponding alternate alleles.|
+|`LEN`|A|Integer|allele length|
+|`MQM`|A|Float|Mean mapping quality of observed alternate alleles|
+|`MQMR`|1|Float|Mean mapping quality of observed reference alleles|
+|`PAIRED`|A|Float|Proportion of observed alternate alleles which are supported by properly paired read fragments|
+|`PAIREDR`|1|Float|Proportion of observed reference alleles which are supported by properly paired read fragments|
+|`MIN_DP`|1|Integer|Minimum depth in gVCF output block.|
+|`END`|1|Integer|Last position (inclusive) in gVCF output record.|
+|`GT`|1|String|Genotype|
+|`GQ`|1|Float|Genotype Quality the Phred-scaled marginal (or unconditional) probability of the called genotype|
+|`GL`|G|Float|Genotype Likelihood log10-scaled likelihoods of the data given the called genotype for each possible genotype generated from the reference and alternate alleles given the sample ploidy|
+|`DP`|1|Integer|Read Depth|
+|`AD`|R|Integer|Number of observation for each allele|
+|`RO`|1|Integer|Reference allele observation count|
+|`QR`|1|Integer|Sum of quality of the reference observations|
+|`AO`|A|Integer|Alternate allele observation count|
+|`QA`|A|Integer|Sum of quality of the alternate observations|
+|`MIN_DP`|1|Integer|Minimum depth in gVCF output block.|
 
 
 
