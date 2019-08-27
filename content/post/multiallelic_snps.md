@@ -3,7 +3,7 @@ title: "Parsing multiallelic sites"
 date: 2019-08-26
 tags: [snp, VCF, variant calling]
 author: Anton
-show_summary: true 
+show_summary: false 
 ---
 
 {{< background "warning" >}}
@@ -55,7 +55,7 @@ K03455.1        2911    .       ATG     ATA     10482.7 .       AB=0;ABP=0;AC=0;
 looking at VCFs is truly a unique form of a cruel punishment, so let's take a closer look at `INFO`- and `FORMAT`- level fields. This can be done through a combination of `vcfbreakmulti`, `vcf2tsv` (another utility from `vcflib` package that converts VCF into tab-delimited data), [`datamash`](https://www.gnu.org/software/datamash/manual/datamash.html#Transpose) `traspose` function:
 
 ```
-cat <VCF file> | vcfbreakmulti | vcf2tsv | datamash traspose
+cat <VCF file> | vcfbreakmulti | vcf2tsv | datamash transpose
 ```
 
 {{< background "success" >}}

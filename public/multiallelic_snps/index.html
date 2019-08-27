@@ -197,7 +197,7 @@ K03455.1        2911    .       ATG     ATA     10482.7 .       AB=0;ABP=0;AC=0;
 
 <p>looking at VCFs is truly a unique form of a cruel punishment, so let&rsquo;s take a closer look at <code>INFO</code>- and <code>FORMAT</code>- level fields. This can be done through a combination of <code>vcfbreakmulti</code>, <code>vcf2tsv</code> (another utility from <code>vcflib</code> package that converts VCF into tab-delimited data), <a href="https://www.gnu.org/software/datamash/manual/datamash.html#Transpose"><code>datamash</code></a> <code>traspose</code> function:</p>
 
-<pre><code>cat &lt;VCF file&gt; | vcfbreakmulti | vcf2tsv | datamash traspose
+<pre><code>cat &lt;VCF file&gt; | vcfbreakmulti | vcf2tsv | datamash transpose
 </code></pre>
 
 <p class="sm col background-success">
