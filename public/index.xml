@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>a on AN lab</title>
-    <link>https://nekrut.bx.psu.edu/</link>
+    <link>https://nekrut.github.io/lab_site/</link>
     <description>Recent content in a on AN lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nekrut.bx.psu.edu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nekrut.github.io/lab_site/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parsing multiallelic sites</title>
-      <link>https://nekrut.bx.psu.edu/multiallelic_snps/</link>
+      <link>https://nekrut.github.io/lab_site/multiallelic_snps/</link>
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nekrut.bx.psu.edu/multiallelic_snps/</guid>
+      <guid>https://nekrut.github.io/lab_site/multiallelic_snps/</guid>
       <description>In diploid systems (e.g., human) multiallelic sites are often ignored. However, in bacterial and viral mixtures multiallelic sites are real and parsing them correctly is critical for understanding the full magnitude of sequence variation. The goal To compare various ways of calling variants in haploid systems I needed to convert VCF files into TAB-delimited format, while parsing out multiallelic sites.
 The data In this experiment we called SNPs from Illumina data obtained by sequencing of HIV&amp;rsquo;s pol gene amplicons.</description>
     </item>
     
     <item>
       <title>History of pBR322</title>
-      <link>https://nekrut.bx.psu.edu/pbr322_history/</link>
+      <link>https://nekrut.github.io/lab_site/pbr322_history/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nekrut.bx.psu.edu/pbr322_history/</guid>
+      <guid>https://nekrut.github.io/lab_site/pbr322_history/</guid>
       <description>We take cloning vectors for given but most people do not know their history. I&#39;m one of these people. Yet because we use pBR322 extensively, I wanted to know its origins. This is a condensed version of that investigation. Stanley Cohen and co-workers (Cohen et al. 1973) constructed first functional plasmids by transforming E. coli with fragments produced by treating R6-5 and pSC101 plasmids using Eco RI restriction enzyme. They effectively showed that functional extrachromosomal replicons can be obtained by joining plasmid DNA of completely different origins.</description>
     </item>
     
     <item>
       <title>Publications</title>
-      <link>https://nekrut.bx.psu.edu/publications/</link>
+      <link>https://nekrut.github.io/lab_site/publications/</link>
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://nekrut.bx.psu.edu/publications/</guid>
+      <guid>https://nekrut.github.io/lab_site/publications/</guid>
       <description>What Who Where Who cares?     Predicting runtimes of bioinformatics tools based on historical data: Five years of Galaxy usage. Tyryshkina A, Coraor N, Nekrutenko A. Bioinformatics. 2019    Child Weight Gain Trajectories Linked To Oral Microbiota Composition. Craig SJC, Blankenberg D, Parodi ACL, Paul IM, Birch LL, Savage JS, Marini ME, Stokes JL, Nekrutenko A, Reimherr M, Chiaromonte F, Makova KD. Sci Rep.</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://nekrut.bx.psu.edu/about/</link>
+      <link>https://nekrut.github.io/lab_site/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nekrut.bx.psu.edu/about/</guid>
+      <guid>https://nekrut.github.io/lab_site/about/</guid>
       <description>Hugo is the world’s fastest framework for building websites. It is written in Go.
 It makes use of a variety of open source projects including:
  https://github.com/russross/blackfriday https://github.com/alecthomas/chroma https://github.com/muesli/smartcrop https://github.com/spf13/cobra https://github.com/spf13/viper  Learn more and contribute on GitHub.</description>
@@ -52,10 +52,10 @@ It makes use of a variety of open source projects including:
     
     <item>
       <title>People</title>
-      <link>https://nekrut.bx.psu.edu/people/</link>
+      <link>https://nekrut.github.io/lab_site/people/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://nekrut.bx.psu.edu/people/</guid>
+      <guid>https://nekrut.github.io/lab_site/people/</guid>
       <description>  The Lab             Dave Bouvier  Marten Cech    John Chilton  Nate Coraor    Han Mei  Anton Nekrutenko     Nick Stoler     Collaborators James Taylor
 Johns Hopkins  Kateryna Makova
 Penn State Sergei Kosakovsky Pond Temple   Daniel Blankenberg

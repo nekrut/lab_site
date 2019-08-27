@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>variant calling on AN lab</title>
-    <link>https://nekrut.bx.psu.edu/tags/variant-calling/</link>
+    <link>https://nekrut.github.io/lab_site/tags/variant-calling/</link>
     <description>Recent content in variant calling on AN lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nekrut.bx.psu.edu/tags/variant-calling/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nekrut.github.io/lab_site/tags/variant-calling/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parsing multiallelic sites</title>
-      <link>https://nekrut.bx.psu.edu/multiallelic_snps/</link>
+      <link>https://nekrut.github.io/lab_site/multiallelic_snps/</link>
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nekrut.bx.psu.edu/multiallelic_snps/</guid>
+      <guid>https://nekrut.github.io/lab_site/multiallelic_snps/</guid>
       <description>In diploid systems (e.g., human) multiallelic sites are often ignored. However, in bacterial and viral mixtures multiallelic sites are real and parsing them correctly is critical for understanding the full magnitude of sequence variation. The goal To compare various ways of calling variants in haploid systems I needed to convert VCF files into TAB-delimited format, while parsing out multiallelic sites.
 The data In this experiment we called SNPs from Illumina data obtained by sequencing of HIV&amp;rsquo;s pol gene amplicons.</description>
     </item>

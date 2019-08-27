@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on AN lab</title>
-    <link>https://nekrut.bx.psu.edu/post/</link>
+    <link>https://nekrut.github.io/lab_site/post/</link>
     <description>Recent content in Posts on AN lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://nekrut.bx.psu.edu/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nekrut.github.io/lab_site/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parsing multiallelic sites</title>
-      <link>https://nekrut.bx.psu.edu/multiallelic_snps/</link>
+      <link>https://nekrut.github.io/lab_site/multiallelic_snps/</link>
       <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nekrut.bx.psu.edu/multiallelic_snps/</guid>
+      <guid>https://nekrut.github.io/lab_site/multiallelic_snps/</guid>
       <description>In diploid systems (e.g., human) multiallelic sites are often ignored. However, in bacterial and viral mixtures multiallelic sites are real and parsing them correctly is critical for understanding the full magnitude of sequence variation. The goal To compare various ways of calling variants in haploid systems I needed to convert VCF files into TAB-delimited format, while parsing out multiallelic sites.
 The data In this experiment we called SNPs from Illumina data obtained by sequencing of HIV&amp;rsquo;s pol gene amplicons.</description>
     </item>
     
     <item>
       <title>History of pBR322</title>
-      <link>https://nekrut.bx.psu.edu/pbr322_history/</link>
+      <link>https://nekrut.github.io/lab_site/pbr322_history/</link>
       <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://nekrut.bx.psu.edu/pbr322_history/</guid>
+      <guid>https://nekrut.github.io/lab_site/pbr322_history/</guid>
       <description>We take cloning vectors for given but most people do not know their history. I&#39;m one of these people. Yet because we use pBR322 extensively, I wanted to know its origins. This is a condensed version of that investigation. Stanley Cohen and co-workers (Cohen et al. 1973) constructed first functional plasmids by transforming E. coli with fragments produced by treating R6-5 and pSC101 plasmids using Eco RI restriction enzyme. They effectively showed that functional extrachromosomal replicons can be obtained by joining plasmid DNA of completely different origins.</description>
     </item>
     
