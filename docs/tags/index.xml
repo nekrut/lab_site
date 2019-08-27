@@ -6,10 +6,37 @@
     <description>Recent content in Tags on AN lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nekrut.github.io/lab_site/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>snp</title>
+      <link>https://nekrut.github.io/lab_site/tags/snp/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/tags/snp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>variant calling</title>
+      <link>https://nekrut.github.io/lab_site/tags/variant-calling/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/tags/variant-calling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VCF</title>
+      <link>https://nekrut.github.io/lab_site/tags/vcf/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/tags/vcf/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>pBR322</title>
