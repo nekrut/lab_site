@@ -3,6 +3,7 @@ title: "Where are we?"
 date: 2019-09-24
 tags: [evolution, biology, history]
 show_summary: false 
+draft: true
 ---
 
 While trying to write a paper on strategy for Global Galaxy I wanted to illustrate how genomics becomes the unifying theme for all of the biological disciplines. Obviously genomics is not the first example of a common unifying theme in biology: evolutionary and population genetics as well as molecular biology have had a profound impact on all of the biological sciences. However, I needed a good historical account on previous "cross-cutting" events in biology. There is a number of good historical accounts of biology including:
