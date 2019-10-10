@@ -6,10 +6,20 @@
     <description>Recent content in a on AN lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nekrut.github.io/lab_site/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Effects of RT and PCR on mutation spectra</title>
+      <link>https://nekrut.github.io/lab_site/rtpct_mut/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/rtpct_mut/</guid>
+      <description>This is one of those &#34;i-write-it-for-myself&#34; notes about a paper that I really needed to understand This is summary of paper by Orton et al. 2015 &amp;ldquo;Distinguishing low frequency mutations from RT-PCR and sequence errors in viral deep sequencing data&amp;rdquo;
+In this manuscript the authors investigated the effects of various stages of sample preparation on the frequency of artifactual mutations. This is particularly interesting because it is based on re-sequencing on a single stranded RNA virus - a procedure that necessarily involves the Reverse Transcription (RT) step.</description>
+    </item>
     
     <item>
       <title>Getting interested in Python</title>
@@ -45,7 +55,7 @@ The data In this experiment we called SNPs from Illumina data obtained by sequen
       <pubDate>Thu, 23 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://nekrut.github.io/lab_site/publications/</guid>
-      <description>What Who Where Who cares?     Predicting runtimes of bioinformatics tools based on historical data: Five years of Galaxy usage. Tyryshkina A, Coraor N, Nekrutenko A. Bioinformatics. 2019    Child Weight Gain Trajectories Linked To Oral Microbiota Composition. Craig SJC, Blankenberg D, Parodi ACL, Paul IM, Birch LL, Savage JS, Marini ME, Stokes JL, Nekrutenko A, Reimherr M, Chiaromonte F, Makova KD. Sci Rep.</description>
+      <description>What Who Where Who cares?     A high resolution view of adaptive event dynamics in a plasmid Mei H, Arbeithuber B, Cremona MA, DeGiorgio M, Nekrutenko A. Genome Biol Evol. 2019    Predicting runtimes of bioinformatics tools based on historical data: Five years of Galaxy usage. Tyryshkina A, Coraor N, Nekrutenko A. Bioinformatics. 2019    Child Weight Gain Trajectories Linked To Oral Microbiota Composition.</description>
     </item>
     
     <item>
