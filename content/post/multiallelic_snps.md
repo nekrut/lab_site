@@ -1,7 +1,7 @@
 ---
-title: "Parsing multiallelic sites"
+title: "Parsing multiallelic sites I"
 date: 2019-08-26
-tags: [snp, VCF, variant calling]
+tags: [snp, VCF, variant calling, freebayes]
 author: Anton
 show_summary: false 
 ---
