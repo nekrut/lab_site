@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<div class="text-center">
+{{ with .Content }}
+  <h4>{{ $.Page.Title }}</h4>
+  {{ . }}
+{{ else }}
+  <h4>{{ .Site.Title }}</h4>
+  <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
+{{ end }}
+</div>
+
+{{ end }}
