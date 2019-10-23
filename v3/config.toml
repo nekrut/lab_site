@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://nekrut.github.io/lab_site/"
 languageCode = "en-us"
 title = "AN LAB"
 theme = "vanilla-bootstrap-hugo-theme"
