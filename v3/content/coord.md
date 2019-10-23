@@ -16,18 +16,6 @@ title:
 <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
 
 
-<script>
-// replace "toner" here with "terrain" or "watercolor"
-var layer = new L.StamenTileLayer("terrain");
-var map = new L.Map("map", {
-center: new L.LatLng(40.79988, -77.86244),
-zoom: 16
-});
-var marker = L.marker([40.79988, -77.86259]).addTo(map);
-map.addLayer(layer);
-marker.bindPopup("<b>Nekrutenko Lab</b><br>Wartik 505").openPopup();
-</script>
-
 
 <div class="card mb-3">
   <div id="map"></div>
@@ -46,13 +34,13 @@ marker.bindPopup("<b>Nekrutenko Lab</b><br>Wartik 505").openPopup();
 </div>
 
 <script>
-          // replace "toner" here with "terrain" or "watercolor"
-          var layer = new L.StamenTileLayer("terrain");
-          var map = new L.Map("map", {
-            center: new L.LatLng(40.79988, -77.86244),
-            zoom: 16
-          });
-          var marker = L.marker([40.79988, -77.86259]).addTo(map);
-          map.addLayer(layer);
-          marker.bindPopup("<b>AN Lab</b><br>Wartik 505").openPopup();
-        </script>
+// replace "toner" here with "terrain" or "watercolor"
+var layer = new L.StamenTileLayer("terrain");
+var map = new L.Map("map", {
+center: new L.LatLng(40.79988, -77.86244),
+zoom: 16
+});
+var marker = L.marker([40.79988, -77.86259]).addTo(map);
+map.addLayer(layer);
+marker.bindPopup("<b>AN Lab</b><br>Wartik 505").openPopup();
+</script>

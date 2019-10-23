@@ -108,7 +108,7 @@ sns.lmplot(x="x", y="y", col="dataset", hue="dataset", data=df,
            )
 {{< / highlight >}}
 
-![png](/images/output_7_1.png)
+![png](/lab_site/images/output_7_1.png)
 
 
 ## Let's look at TnSeq data 
@@ -282,7 +282,7 @@ The most convenient way to take a quick look at a univariate distribution in sea
 sns.distplot(tdf['gc'])
 {{< / highlight >}}
 
-![png](/images/output_26_1.png)
+![png](/lab_site/images/output_26_1.png)
 
 
 {{< highlight py3 >}}
@@ -291,7 +291,7 @@ sns.distplot(tdf['gc'])
 sns.distplot(tdf['count'])
 {{< / highlight >}}
 
-![png](/images/output_27_1.png)
+![png](/lab_site/images/output_27_1.png)
 
 {{< highlight py3 >}}
 # We can narrow it down
@@ -299,7 +299,7 @@ sns.distplot(tdf['count'])
 sns.distplot(tdf['count'][(tdf['count']>6)&(tdf['count']<100)])
 {{< / highlight >}}
 
-![png](/images/output_28_1.png)
+![png](/lab_site/images/output_28_1.png)
 
 {{< highlight py3 >}}
 # Or increase the number of bins and change the scale
@@ -308,7 +308,7 @@ g=sns.distplot(tdf['count'],bins=10000)
 g.set(xscale="log")
 {{< / highlight >}}
 
-![png](/images/output_29_1.png)
+![png](/lab_site/images/output_29_1.png)
 
 
 {{< highlight py3 >}}
@@ -319,7 +319,7 @@ g.set(xscale="log")
 
 {{< / highlight >}}
 
-![png](/images/output_30_1.png)
+![png](/lab_site/images/output_30_1.png)
 
 {{< highlight py3 >}}
 # Plotting the relationship between GC count and insertion frequency
@@ -327,7 +327,7 @@ g.set(xscale="log")
 sns.jointplot(x="count", y="gc", data=tdf[tdf['count']>10]);
 {{< / highlight >}}
 
-![png](/images/output_31_0.png)
+![png](/lab_site/images/output_31_0.png)
 
 
 # Visualizing statistical relationships
@@ -350,7 +350,7 @@ There are several ways to draw a scatter plot in seaborn. The most basic, which 
 sns.relplot(x='gc',y='count',data=tdf[tdf['count']>100])
 {{< / highlight >}}
 
-![png](/images/output_35_1.png)
+![png](/lab_site/images/output_35_1.png)
 
 While the points are plotted in two dimensions, another dimension can be added to the plot by coloring the points according to a third variable. In seaborn, this is referred to as using a “hue semantic”, because the color of the point gains meaning:
 
@@ -358,14 +358,14 @@ While the points are plotted in two dimensions, another dimension can be added t
 sns.relplot(x='gc',y='count',data=tdf[tdf['count']>100],hue='construct')
 {{< / highlight >}}
 
-![png](//images/output_37_1.png)
+![png](//lab_site/images/output_37_1.png)
 
 {{< highlight py3 >}}
 g = sns.relplot(x='gc',y='count',data=tdf[tdf['count']>100],hue='construct')
 g.set(yscale="log")
 {{< / highlight >}}
 
-![png](/images/output_38_1.png)
+![png](/lab_site/images/output_38_1.png)
 
 To emphasize the difference between the classes, and to improve accessibility, you can use a different marker style for each class:
 
@@ -373,7 +373,7 @@ To emphasize the difference between the classes, and to improve accessibility, y
 sns.relplot(x='gc',y='count',data=tdf[tdf['count']>100],hue='construct',style='genic')
 {{< / highlight >}}
 
-![png](/images/output_40_1.png)
+![png](/lab_site/images/output_40_1.png)
 
 
 # Categorical scatterplots
@@ -385,7 +385,7 @@ The default representation of the data in [`catplot()`](https://seaborn.pydata.o
 sns.catplot(x="construct", y="count", data=tdf[tdf['count']>100]);
 {{< / highlight >}}
 
-![png](/images/output_43_0.png)
+![png](/lab_site/images/output_43_0.png)
 
 The `jitter` parameter controls the magnitude of jitter or disables it altogether:
 
@@ -393,7 +393,7 @@ The `jitter` parameter controls the magnitude of jitter or disables it altogethe
 sns.catplot(x="construct", y="count", data=tdf[tdf['count']>100],jitter=False);
 {{< / highlight >}}
 
-![png](/images/output_45_0.png)
+![png](/lab_site/images/output_45_0.png)
 
 The second approach adjusts the points along the categorical axis using an algorithm that prevents them from overlapping. It can give a better representation of the distribution of observations, although it only works well for relatively small datasets. This kind of plot is sometimes called a “beeswarm” and is drawn in seaborn by [`swarmplot()`](https://seaborn.pydata.org/generated/seaborn.swarmplot.html#seaborn.swarmplot), which is activated by setting `kind="swarm"` in [`catplot()`](https://seaborn.pydata.org/generated/seaborn.catplot.html#seaborn.catplot):
 
@@ -401,7 +401,7 @@ The second approach adjusts the points along the categorical axis using an algor
 sns.catplot(x="construct", y="count", data=tdf[tdf['count']>100],kind="swarm")
 {{< / highlight >}}
 
-![png](/images/output_47_0.png)
+![png](/lab_site/images/output_47_0.png)
 
 Similar to the relational plots, it’s possible to add another dimension to a categorical plot by using a `hue` semantic. (The categorical plots do not currently support `size` or `style` semantics). Each different categorical plotting function handles the `hue` semantic differently. For the scatter plots, it is only necessary to change the color of the points:
 
@@ -409,7 +409,7 @@ Similar to the relational plots, it’s possible to add another dimension to a c
 sns.catplot(x="construct", y="count", data=tdf[tdf['count']>100],kind="swarm",hue='genic')
 {{< / highlight >}}
 
-![png](/images/output_49_1.png)
+![png](/lab_site/images/output_49_1.png)
 
 We’ve referred to the idea of “categorical axis”. In these examples, that’s always corresponded to the horizontal axis. But it’s often helpful to put the categorical variable on the vertical axis (particularly when the category names are relatively long or there are many categories). To do this, swap the assignment of variables to axes:
 
@@ -417,7 +417,7 @@ We’ve referred to the idea of “categorical axis”. In these examples, that�
 sns.catplot(x="count", y="construct", data=tdf[tdf['count']>100],kind="swarm",hue='genic')
 {{< / highlight >}}
 
-![png](/images/output_51_1.png)
+![png](/lab_site/images/output_51_1.png)
 
 ## Distributions of observations within categories
 As the size of the dataset grows,, categorical scatter plots become limited in the information they can provide about the distribution of values within each category. When this happens, there are several approaches for summarizing the distributional information in ways that facilitate easy comparisons across the category levels.
@@ -430,7 +430,7 @@ The first is the familiar [`boxplot()`](https://seaborn.pydata.org/generated/sea
 sns.catplot(x="construct", y="count", data=tdf[(tdf['count']>10) & (tdf['count']<100)],kind="box")
 {{< / highlight >}}
 
-![png](/images/output_54_1.png)
+![png](/lab_site/images/output_54_1.png)
 
 When adding a `hue` semantic, the box for each level of the semantic variable is moved along the categorical axis so they don’t overlap:
 
@@ -438,7 +438,7 @@ When adding a `hue` semantic, the box for each level of the semantic variable is
 sns.catplot(x="construct", y="count", data=tdf[(tdf['count']>10) & (tdf['count']<100)],kind="box",hue='genic')
 {{< / highlight >}}
 
-![png](/images/output_56_1.png)
+![png](/lab_site/images/output_56_1.png)
 
 A related function, [`boxenplot()`](https://seaborn.pydata.org/generated/seaborn.boxenplot.html#seaborn.boxenplot), draws a plot that is similar to a box plot but optimized for showing more information about the shape of the distribution. It is best suited for larger datasets:
 
@@ -446,7 +446,7 @@ A related function, [`boxenplot()`](https://seaborn.pydata.org/generated/seaborn
 sns.catplot(x="construct", y="count", data=tdf[(tdf['count']>10) & (tdf['count']<100)],kind="boxen")
 {{< / highlight >}}
 
-![png](/images/output_58_1.png)
+![png](/lab_site/images/output_58_1.png)
 
 
 ### Violinplots
@@ -456,13 +456,13 @@ A different approach is a [`violinplot()`](https://seaborn.pydata.org/generated/
 sns.catplot(x="construct", y="count", data=tdf[(tdf['count']>10) & (tdf['count']<100)],kind="violin")
 {{< / highlight >}}
 
-![png](/images/output_60_1.png)
+![png](/lab_site/images/output_60_1.png)
 
 {{< highlight py3 >}}
 sns.catplot(x="construct", y="count", data=tdf[(tdf['count']>10) & (tdf['count']<100)],kind="violin",hue='genic')
 {{< / highlight >}}
 
-![png](/images/output_61_1.png)
+![png](/lab_site/images/output_61_1.png)
 
 It’s also possible to “split” the violins when the hue parameter has only two levels, which can allow for a more efficient use of space:
 
@@ -470,7 +470,7 @@ It’s also possible to “split” the violins when the hue parameter has only 
 sns.catplot(x="construct", y="count", data=tdf[(tdf['count']>10) & (tdf['count']<100)],kind="violin",hue='genic',split=True)
 {{< / highlight >}}
 
-![png](/images/output_63_1.png)
+![png](/lab_site/images/output_63_1.png)
 
 
 Finally, there are several options for the plot that is drawn on the interior of the violins, including ways to show each individual observation instead of the summary boxplot values:
@@ -485,7 +485,7 @@ A familiar style of plot that accomplishes this goal is a bar plot. In seaborn, 
 sns.catplot(x="construct",y="count",hue="genic",kind="bar",data=tdf)
 {{< / highlight >}}
 
-![png](/images/output_67_1.png)
+![png](/lab_site/images/output_67_1.png)
 
 A special case for the bar plot is when you want to show the number of observations in each category rather than computing a statistic for a second variable. This is similar to a histogram over a categorical, rather than quantitative, variable. In seaborn, it’s easy to do so with the [`countplot()`](https://seaborn.pydata.org/generated/seaborn.countplot.html#seaborn.countplot) function:
 
@@ -494,7 +494,7 @@ A special case for the bar plot is when you want to show the number of observati
 sns.catplot(x="genic",kind="count",data=tdf)
 {{< / highlight >}}
 
-![png](/images/output_69_1.png)
+![png](/lab_site/images/output_69_1.png)
 
 ## Showing multiple relationships with facets
 Just like [`relplot()`](https://seaborn.pydata.org/generated/seaborn.relplot.html#seaborn.relplot), the fact that [`catplot()`](https://seaborn.pydata.org/generated/seaborn.catplot.html#seaborn.catplot) is built on a [`FacetGrid`](https://seaborn.pydata.org/generated/seaborn.FacetGrid.html#seaborn.FacetGrid) means that it is easy to add faceting variables to visualize higher-dimensional relationships:
@@ -503,4 +503,4 @@ Just like [`relplot()`](https://seaborn.pydata.org/generated/seaborn.relplot.htm
 sns.catplot(x="genic", y="count", data=tdf[(tdf['count']>10) & (tdf['count']<1000)],kind="boxen",col='construct',col_wrap=2)
 {{< / highlight >}}
 
-![png](/images/output_71_1.png)
+![png](/lab_site/images/output_71_1.png)
