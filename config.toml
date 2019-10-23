@@ -4,6 +4,7 @@ defaultContentLanguage = "en"
 title = "AN lab"
 theme = "papercss-hugo-theme"
 googleAnalytics = "UA-123456789-1"
+canonifyURLs = true
 
 [taxonomies]
   tag = "tags"

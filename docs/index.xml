@@ -17,15 +17,15 @@
       <pubDate>Mon, 21 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://nekrut.github.io/lab_site/coord/</guid>
-      <description>#map{ height: 480px }   
- // replace &#34;toner&#34; here with &#34;terrain&#34; or &#34;watercolor&#34; var layer = new L.StamenTileLayer(&#34;terrain&#34;); var map = new L.Map(&#34;map&#34;, { center: new L.LatLng(40.79988, -77.86244), zoom: 16 }); var marker = L.marker([40.79988, -77.86259]).addTo(map); map.addLayer(layer); marker.bindPopup(&#34;Nekrutenko Lab
-Wartik 505&#34;).openPopup();   Coordinates Nekrutenko Lab
+      <description> #map{ height: 480px }   
+ Coordinates Nekrutenko Lab
 Wartik 505
 Department of Biochemistry and Molecular Biology
 The Pennsylvania State University
 University Park, PA 16802, USA
 814.865.4752
-    // replace &#34;</description>
+    // replace &#34;toner&#34; here with &#34;terrain&#34; or &#34;watercolor&#34; var layer = new L.StamenTileLayer(&#34;terrain&#34;); var map = new L.Map(&#34;map&#34;, { center: new L.LatLng(40.79988, -77.86244), zoom: 16 }); var marker = L.marker([40.79988, -77.86259]).addTo(map); map.addLayer(layer); marker.bindPopup(&#34;AN Lab
+Wartik 505&#34;).openPopup();  </description>
     </item>
     
     <item>

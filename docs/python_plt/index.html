@@ -271,7 +271,7 @@ sns<span style="color:#f92672">.</span>lmplot(x<span style="color:#f92672">=</sp
            col_wrap<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>
            )</code></pre></div>
 
-<p><img src="/images/output_7_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_7_1.png" alt="png" /></p>
 
 <h2 id="let-s-look-at-tnseq-data">Let&rsquo;s look at TnSeq data</h2>
 
@@ -392,39 +392,39 @@ tdf<span style="color:#f92672">.</span>loc[tdf[<span style="color:#e6db74">&#39;
 
 sns<span style="color:#f92672">.</span>distplot(tdf[<span style="color:#e6db74">&#39;gc&#39;</span>])</code></pre></div>
 
-<p><img src="/images/output_26_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_26_1.png" alt="png" /></p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3"><span style="color:#75715e"># Distribution of read counts is a bit gloomy</span>
 
 sns<span style="color:#f92672">.</span>distplot(tdf[<span style="color:#e6db74">&#39;count&#39;</span>])</code></pre></div>
 
-<p><img src="/images/output_27_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_27_1.png" alt="png" /></p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3"><span style="color:#75715e"># We can narrow it down</span>
 
 sns<span style="color:#f92672">.</span>distplot(tdf[<span style="color:#e6db74">&#39;count&#39;</span>][(tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">6</span>)<span style="color:#f92672">&amp;</span>(tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">100</span>)])</code></pre></div>
 
-<p><img src="/images/output_28_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_28_1.png" alt="png" /></p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3"><span style="color:#75715e"># Or increase the number of bins and change the scale</span>
 
 g<span style="color:#f92672">=</span>sns<span style="color:#f92672">.</span>distplot(tdf[<span style="color:#e6db74">&#39;count&#39;</span>],bins<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>)
 g<span style="color:#f92672">.</span>set(xscale<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;log&#34;</span>)</code></pre></div>
 
-<p><img src="/images/output_29_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_29_1.png" alt="png" /></p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3"><span style="color:#75715e"># And also get rif of zero counts</span>
 
 g<span style="color:#f92672">=</span>sns<span style="color:#f92672">.</span>distplot(tdf[<span style="color:#e6db74">&#39;count&#39;</span>][tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">0</span>],bins<span style="color:#f92672">=</span><span style="color:#ae81ff">10000</span>)
 g<span style="color:#f92672">.</span>set(xscale<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;log&#34;</span>)</code></pre></div>
 
-<p><img src="/images/output_30_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_30_1.png" alt="png" /></p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3"><span style="color:#75715e"># Plotting the relationship between GC count and insertion frequency</span>
 
 sns<span style="color:#f92672">.</span>jointplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gc&#34;</span>, data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>]);</code></pre></div>
 
-<p><img src="/images/output_31_0.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_31_0.png" alt="png" /></p>
 
 <h1 id="visualizing-statistical-relationships">Visualizing statistical relationships</h1>
 
@@ -447,24 +447,24 @@ sns<span style="color:#f92672">.</span>jointplot(x<span style="color:#f92672">=<
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>relplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gc&#39;</span>,y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count&#39;</span>,data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span>])</code></pre></div>
 
-<p><img src="/images/output_35_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_35_1.png" alt="png" /></p>
 
 <p>While the points are plotted in two dimensions, another dimension can be added to the plot by coloring the points according to a third variable. In seaborn, this is referred to as using a “hue semantic”, because the color of the point gains meaning:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>relplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gc&#39;</span>,y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count&#39;</span>,data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span>],hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;construct&#39;</span>)</code></pre></div>
 
-<p><img src="//images/output_37_1.png" alt="png" /></p>
+<p><img src="//lab_site/images/output_37_1.png" alt="png" /></p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">g <span style="color:#f92672">=</span> sns<span style="color:#f92672">.</span>relplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gc&#39;</span>,y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count&#39;</span>,data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span>],hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;construct&#39;</span>)
 g<span style="color:#f92672">.</span>set(yscale<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;log&#34;</span>)</code></pre></div>
 
-<p><img src="/images/output_38_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_38_1.png" alt="png" /></p>
 
 <p>To emphasize the difference between the classes, and to improve accessibility, you can use a different marker style for each class:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>relplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;gc&#39;</span>,y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;count&#39;</span>,data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span>],hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;construct&#39;</span>,style<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;genic&#39;</span>)</code></pre></div>
 
-<p><img src="/images/output_40_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_40_1.png" alt="png" /></p>
 
 <h1 id="categorical-scatterplots">Categorical scatterplots</h1>
 
@@ -472,31 +472,31 @@ g<span style="color:#f92672">.</span>set(yscale<span style="color:#f92672">=</sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span>]);</code></pre></div>
 
-<p><img src="/images/output_43_0.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_43_0.png" alt="png" /></p>
 
 <p>The <code>jitter</code> parameter controls the magnitude of jitter or disables it altogether:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span>],jitter<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>);</code></pre></div>
 
-<p><img src="/images/output_45_0.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_45_0.png" alt="png" /></p>
 
 <p>The second approach adjusts the points along the categorical axis using an algorithm that prevents them from overlapping. It can give a better representation of the distribution of observations, although it only works well for relatively small datasets. This kind of plot is sometimes called a “beeswarm” and is drawn in seaborn by <a href="https://seaborn.pydata.org/generated/seaborn.swarmplot.html#seaborn.swarmplot"><code>swarmplot()</code></a>, which is activated by setting <code>kind=&quot;swarm&quot;</code> in <a href="https://seaborn.pydata.org/generated/seaborn.catplot.html#seaborn.catplot"><code>catplot()</code></a>:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span>],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;swarm&#34;</span>)</code></pre></div>
 
-<p><img src="/images/output_47_0.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_47_0.png" alt="png" /></p>
 
 <p>Similar to the relational plots, it’s possible to add another dimension to a categorical plot by using a <code>hue</code> semantic. (The categorical plots do not currently support <code>size</code> or <code>style</code> semantics). Each different categorical plotting function handles the <code>hue</code> semantic differently. For the scatter plots, it is only necessary to change the color of the points:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span>],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;swarm&#34;</span>,hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;genic&#39;</span>)</code></pre></div>
 
-<p><img src="/images/output_49_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_49_1.png" alt="png" /></p>
 
 <p>We’ve referred to the idea of “categorical axis”. In these examples, that’s always corresponded to the horizontal axis. But it’s often helpful to put the categorical variable on the vertical axis (particularly when the category names are relatively long or there are many categories). To do this, swap the assignment of variables to axes:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, data<span style="color:#f92672">=</span>tdf[tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">100</span>],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;swarm&#34;</span>,hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;genic&#39;</span>)</code></pre></div>
 
-<p><img src="/images/output_51_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_51_1.png" alt="png" /></p>
 
 <h2 id="distributions-of-observations-within-categories">Distributions of observations within categories</h2>
 
@@ -508,19 +508,19 @@ g<span style="color:#f92672">.</span>set(yscale<span style="color:#f92672">=</sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[(tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">&amp;</span> (tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">100</span>)],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span>)</code></pre></div>
 
-<p><img src="/images/output_54_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_54_1.png" alt="png" /></p>
 
 <p>When adding a <code>hue</code> semantic, the box for each level of the semantic variable is moved along the categorical axis so they don’t overlap:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[(tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">&amp;</span> (tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">100</span>)],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;box&#34;</span>,hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;genic&#39;</span>)</code></pre></div>
 
-<p><img src="/images/output_56_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_56_1.png" alt="png" /></p>
 
 <p>A related function, <a href="https://seaborn.pydata.org/generated/seaborn.boxenplot.html#seaborn.boxenplot"><code>boxenplot()</code></a>, draws a plot that is similar to a box plot but optimized for showing more information about the shape of the distribution. It is best suited for larger datasets:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[(tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">&amp;</span> (tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">100</span>)],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;boxen&#34;</span>)</code></pre></div>
 
-<p><img src="/images/output_58_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_58_1.png" alt="png" /></p>
 
 <h3 id="violinplots">Violinplots</h3>
 
@@ -528,17 +528,17 @@ g<span style="color:#f92672">.</span>set(yscale<span style="color:#f92672">=</sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[(tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">&amp;</span> (tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">100</span>)],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;violin&#34;</span>)</code></pre></div>
 
-<p><img src="/images/output_60_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_60_1.png" alt="png" /></p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[(tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">&amp;</span> (tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">100</span>)],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;violin&#34;</span>,hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;genic&#39;</span>)</code></pre></div>
 
-<p><img src="/images/output_61_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_61_1.png" alt="png" /></p>
 
 <p>It’s also possible to “split” the violins when the hue parameter has only two levels, which can allow for a more efficient use of space:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[(tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">&amp;</span> (tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">100</span>)],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;violin&#34;</span>,hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;genic&#39;</span>,split<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)</code></pre></div>
 
-<p><img src="/images/output_63_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_63_1.png" alt="png" /></p>
 
 <p>Finally, there are several options for the plot that is drawn on the interior of the violins, including ways to show each individual observation instead of the summary boxplot values:</p>
 
@@ -552,13 +552,13 @@ g<span style="color:#f92672">.</span>set(yscale<span style="color:#f92672">=</sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;construct&#34;</span>,y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>,hue<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;genic&#34;</span>,kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;bar&#34;</span>,data<span style="color:#f92672">=</span>tdf)</code></pre></div>
 
-<p><img src="/images/output_67_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_67_1.png" alt="png" /></p>
 
 <p>A special case for the bar plot is when you want to show the number of observations in each category rather than computing a statistic for a second variable. This is similar to a histogram over a categorical, rather than quantitative, variable. In seaborn, it’s easy to do so with the <a href="https://seaborn.pydata.org/generated/seaborn.countplot.html#seaborn.countplot"><code>countplot()</code></a> function:</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;genic&#34;</span>,kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>,data<span style="color:#f92672">=</span>tdf)</code></pre></div>
 
-<p><img src="/images/output_69_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_69_1.png" alt="png" /></p>
 
 <h2 id="showing-multiple-relationships-with-facets">Showing multiple relationships with facets</h2>
 
@@ -566,7 +566,7 @@ g<span style="color:#f92672">.</span>set(yscale<span style="color:#f92672">=</sp
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-py3" data-lang="py3">sns<span style="color:#f92672">.</span>catplot(x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;genic&#34;</span>, y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;count&#34;</span>, data<span style="color:#f92672">=</span>tdf[(tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">10</span>) <span style="color:#f92672">&amp;</span> (tdf[<span style="color:#e6db74">&#39;count&#39;</span>]<span style="color:#f92672">&lt;</span><span style="color:#ae81ff">1000</span>)],kind<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;boxen&#34;</span>,col<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;construct&#39;</span>,col_wrap<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)</code></pre></div>
 
-<p><img src="/images/output_71_1.png" alt="png" /></p>
+<p><img src="/lab_site/images/output_71_1.png" alt="png" /></p>
 
 
 
