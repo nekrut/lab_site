@@ -1,5 +1,5 @@
 ---
-date: "2014-04-09"
+date: "2019-10-25"
 title: "Collaborators"
 ---
 
@@ -42,7 +42,7 @@ title: "Collaborators"
 	</div>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
-    <b>James Taylor <span class="badge badge-dark">Johns Hopkins</span></b>
+    <b>James Taylor <span class="badge badge-pill badge-light">Johns Hopkins</span></b>
     <div class="btn-group" role="group" aria-label="Basic example">
   		<a class="btn btn-warning btn-sm" href="https://www.taylorlab.org/" role="button"><i data-feather="link-2"></i></a>
   		<a class="btn btn-success btn-sm" href="https://www.ncbi.nlm.nih.gov/pubmed/?term=taylor+nekrutenko" role="button"><i data-feather="book-open"></i></a>

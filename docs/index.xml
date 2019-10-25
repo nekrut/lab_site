@@ -6,10 +6,19 @@
     <description>Recent content on AN LAB</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nekrut.github.io/lab_site/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Collaborators</title>
+      <link>https://nekrut.github.io/lab_site/colab/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/colab/</guid>
+      <description>Dan Blankenbrg Cleveland Clinic     Jeremy Goecks OHSU     Björn Grüning Freiburg     Sergei Kosakovsky Pond Temple     Kateryna Makova PSU     James Taylor Johns Hopkins      </description>
+    </item>
     
     <item>
       <title></title>
@@ -81,15 +90,6 @@ We take cloning vectors for given but most people do not know their history. The
     </item>
     
     <item>
-      <title>Collaborators</title>
-      <link>https://nekrut.github.io/lab_site/colab/</link>
-      <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://nekrut.github.io/lab_site/colab/</guid>
-      <description>Dan Blankenbrg Cleveland Clinic     Jeremy Goecks OHSU     Björn Grüning Freiburg     Sergei Kosakovsky Pond Temple     Kateryna Makova PSU     James Taylor Johns Hopkins      </description>
-    </item>
-    
-    <item>
       <title>People</title>
       <link>https://nekrut.github.io/lab_site/about/</link>
       <pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate>
@@ -106,7 +106,7 @@ Dave Bouvier US NO     Martin Cech CZ      John Chilton US      Nate Coraor US  
       
       <guid>https://nekrut.github.io/lab_site/people/</guid>
       <description>We are always looking. Click here to join!
-The Lab  Collaborators   Dave Bouvier US NO     Martin Čech CZ      John Chilton US      Nate Coraor US      Jennifer Jackson US     Nick Keneer US    Delphine Lariviere FR     Han Mei CN     Anton Nekrutenko US UA      Nick Stoler US     Marius Van Den Beek DE        Dan Blankenberg Cleveland Clinic     Jeremy Goecks OHSU     Björn Grüning Freiburg     Sergei Kosakovsky Pond Temple     Kateryna Makova PSU     James Taylor Johns Hopkins</description>
+The Lab  Collaborators   Dave Bouvier US NO     Martin Čech CZ      John Chilton US      Nate Coraor US      Jennifer Jackson US     Nick Keneer US    Delphine Lariviere FR     Han Mei CN     Anton Nekrutenko US UA      Nick Stoler US     Marius Van Den Beek DE        Dan Blankenberg Cleveland Clinic Galaxy     Jeremy Goecks OHSU Galaxy     Björn Grüning Freiburg Galaxy     Sergei Kosakovsky Pond Temple     Kateryna Makova PSU     James Taylor Johns Hopkins Galaxy</description>
     </item>
     
   </channel>

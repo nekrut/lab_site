@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nekrut.github.io/lab_site/coord/</loc>
-    <lastmod>2019-10-21T00:00:00+00:00</lastmod>
+    <loc>https://nekrut.github.io/lab_site/</loc>
+    <lastmod>2019-10-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://nekrut.github.io/lab_site/</loc>
+    <loc>https://nekrut.github.io/lab_site/colab/</loc>
+    <lastmod>2019-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nekrut.github.io/lab_site/coord/</loc>
     <lastmod>2019-10-21T00:00:00+00:00</lastmod>
   </url>
   
@@ -110,11 +115,6 @@
   <url>
     <loc>https://nekrut.github.io/lab_site/tags/plasmid/</loc>
     <lastmod>2019-08-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nekrut.github.io/lab_site/colab/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
