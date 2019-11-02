@@ -6,10 +6,19 @@
     <description>Recent content in RNA viruses on AN LAB</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nekrut.github.io/lab_site/tags/rna-viruses/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Viral variation: a Galaxy tutorial</title>
+      <link>https://nekrut.github.io/lab_site/hiv_var1/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/hiv_var1/</guid>
+      <description>This tutorials will soon be converted into an official Galaxy Training Material  Questions  How to identify variants in viral genomes? How to separate reliable calls from spurious? How to analyze dozens of samples simultaneously?  Objectives  Highlight analysis of real life data containing many samples Demonstrate dynamic downsampling using Galaxy&amp;rsquo;s Expression Tools Show how to annotate drug resistance mutations Highlight the importance of Jupyter notebooks  Key points  Real datasets contain many samples - Galaxy can handle this with ease High coverage in viral re-sequencing data may cause problems Strand bias estimation can help to eliminate spurious calls contributors:  Introduction Identifying sequence variants in pathogens such as viruses and bacteria is important for obvious reasons.</description>
+    </item>
     
     <item>
       <title>Effects of RT and PCR on mutation spectra</title>

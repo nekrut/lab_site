@@ -6,10 +6,37 @@
     <description>Recent content in Tags on AN LAB</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nekrut.github.io/lab_site/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Galaxy</title>
+      <link>https://nekrut.github.io/lab_site/tags/galaxy/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/tags/galaxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HIV</title>
+      <link>https://nekrut.github.io/lab_site/tags/hiv/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/tags/hiv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RNA viruses</title>
+      <link>https://nekrut.github.io/lab_site/tags/rna-viruses/</link>
+      <pubDate>Tue, 29 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/tags/rna-viruses/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>mutation</title>
@@ -26,15 +53,6 @@
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://nekrut.github.io/lab_site/tags/pcr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>RNA viruses</title>
-      <link>https://nekrut.github.io/lab_site/tags/rna-viruses/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://nekrut.github.io/lab_site/tags/rna-viruses/</guid>
       <description></description>
     </item>
     

@@ -4,4 +4,7 @@
     {{ .Site.Params.footerText | markdownify }}
   </div>
 </footer>
+{{ if or .Params.math .Site.Params.math }}
+{{ partial "math.html" . }}
+{{ end }}
 {{ end }}
