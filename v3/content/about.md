@@ -1,5 +1,5 @@
 ---
-date: "2014-04-09"
+date: "2020-09-03"
 title: "People"
 ---
 
@@ -38,6 +38,12 @@ title: "People"
   		<a class="btn btn-primary btn-sm" href="https://twitter.com/natefoo" role="button"><i data-feather="twitter"></i></a>
   		<a class="btn btn-success btn-sm" href="https://www.ncbi.nlm.nih.gov/pubmed/?term=nekrutenko+AND+coraor" role="button"><i data-feather="book-open"></i></a>
 	</div>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
+    <b>Assunta DeSanto <span class="badge badge-dark">US</span></b>
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <a class="btn btn-secondary btn-sm" href="https://github.com/assuntad23" role="button"><i data-feather="github"></i></a>
+  </div>
   </li>
   <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">
     <b>Jennifer Jackson <span class="badge badge-dark">US</span></b>
