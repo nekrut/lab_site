@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on AN lab</title>
+    <link>https://nekrut.github.io/lab_site/post/</link>
+    <description>Recent content in Posts on AN lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nekrut.github.io/lab_site/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Effects of RT and PCR on mutation spectra</title>
+      <link>https://nekrut.github.io/lab_site/rtpct_mut/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/rtpct_mut/</guid>
+      <description>This is one of those &#34;i-write-it-for-myself&#34; notes about a paper that I really needed to understand This is summary of paper by Orton et al. 2015 &amp;ldquo;Distinguishing low frequency mutations from RT-PCR and sequence errors in viral deep sequencing data&amp;rdquo;
+In this manuscript the authors investigated the effects of various stages of sample preparation on the frequency of artifactual mutations. This is particularly interesting because it is based on re-sequencing on a single stranded RNA virus - a procedure that necessarily involves the Reverse Transcription (RT) step.</description>
+    </item>
+    
+    <item>
+      <title>Getting interested in Python</title>
+      <link>https://nekrut.github.io/lab_site/python_plt/</link>
+      <pubDate>Wed, 09 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/python_plt/</guid>
+      <description>This lecture draws extensively from Seaborn tutorials. A primer of plotting with Python # Colaboratory has an old version of seaborn, so let&#39;s upgrade !pip install seaborn --upgrade  Requirement already up-to-date: seaborn in /usr/local/lib/python3.6/dist-packages (0.9.0) Requirement already satisfied, skipping upgrade: numpy&amp;gt;=1.9.3 in /usr/local/lib/python3.6/dist-packages (from seaborn) (1.16.5) Requirement already satisfied, skipping upgrade: pandas&amp;gt;=0.15.2 in /usr/local/lib/python3.6/dist-packages (from seaborn) (0.24.2) Requirement already satisfied, skipping upgrade: scipy&amp;gt;=0.14.0 in /usr/local/lib/python3.6/dist-packages (from seaborn) (1.3.1) Requirement already satisfied, skipping upgrade: matplotlib&amp;gt;=1.</description>
+    </item>
+    
+    <item>
+      <title>Parsing multiallelic sites</title>
+      <link>https://nekrut.github.io/lab_site/multiallelic_snps/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/multiallelic_snps/</guid>
+      <description>In diploid systems (e.g., human) multiallelic sites are often ignored. However, in bacterial and viral mixtures multiallelic sites are real and parsing them correctly is critical for understanding the full magnitude of sequence variation. The goal To compare various ways of calling variants in haploid systems I needed to convert VCF files into TAB-delimited format, while parsing out multiallelic sites.
+The data In this experiment we called SNPs from Illumina data obtained by sequencing of HIV&amp;rsquo;s pol gene amplicons.</description>
+    </item>
+    
+    <item>
+      <title>History of pBR322</title>
+      <link>https://nekrut.github.io/lab_site/pbr322_history/</link>
+      <pubDate>Fri, 23 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/pbr322_history/</guid>
+      <description>We take cloning vectors for given but most people do not know their history. I&#39;m one of these people. Yet because we use pBR322 extensively, I wanted to know its origins. This is a condensed version of that investigation. Stanley Cohen and co-workers (Cohen et al. 1973) constructed first functional plasmids by transforming E. coli with fragments produced by treating R6-5 and pSC101 plasmids using Eco RI restriction enzyme. They effectively showed that functional extrachromosomal replicons can be obtained by joining plasmid DNA of completely different origins.</description>
+    </item>
+    
+  </channel>
+</rss>

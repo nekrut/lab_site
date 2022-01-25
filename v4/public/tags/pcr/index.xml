@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PCR on AN lab</title>
+    <link>https://nekrut.github.io/lab_site/tags/pcr/</link>
+    <description>Recent content in PCR on AN lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nekrut.github.io/lab_site/tags/pcr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Effects of RT and PCR on mutation spectra</title>
+      <link>https://nekrut.github.io/lab_site/rtpct_mut/</link>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://nekrut.github.io/lab_site/rtpct_mut/</guid>
+      <description>This is one of those &#34;i-write-it-for-myself&#34; notes about a paper that I really needed to understand This is summary of paper by Orton et al. 2015 &amp;ldquo;Distinguishing low frequency mutations from RT-PCR and sequence errors in viral deep sequencing data&amp;rdquo;
+In this manuscript the authors investigated the effects of various stages of sample preparation on the frequency of artifactual mutations. This is particularly interesting because it is based on re-sequencing on a single stranded RNA virus - a procedure that necessarily involves the Reverse Transcription (RT) step.</description>
+    </item>
+    
+  </channel>
+</rss>

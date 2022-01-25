@@ -1,0 +1,42 @@
+baseURL = "https://nekrut.github.io/lab_site/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+title = "AN lab"
+theme = "papercss-hugo-theme"
+googleAnalytics = "UA-123456789-1"
+canonifyURLs = true
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[imaging]
+  quality = 99
+
+[params]
+  homeMetaContent = "A Hugo theme made with PaperCSS, the less formal CSS framework."
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "Jan 2, 2006"
+  homeText = "A part of Galaxy"
+  indexTitle = "AN Lab: A part of Galaxy"
+
+[menu]
+  [[menu.nav]]
+    name = "Galaxy"
+    url = "http://galaxyproject.org"
+    weight = 1
+  [[menu.nav]]
+    name = "People"
+    url = "/people/"
+    weight = 2
+  [[menu.nav]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 3
+  [[menu.nav]]
+    name = "Blog"
+    url = "/post/"
+    weight = 4
+  
