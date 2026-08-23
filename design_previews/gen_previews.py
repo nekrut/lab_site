@@ -742,7 +742,7 @@ footer{border-top:1px solid var(--ink);padding:28px 0 60px;display:flex;justify-
 <div class="hero"><div class="wrap">
 <div class="mono">Penn State · Est. 2003 · galaxyproject.org</div>
 <h1>anLab<span>.</span></h1>
-<p><b>anLab</b> — the Anton Nekrutenko lab at Penn State — is the birthplace of <b>Galaxy</b>: the open platform for accessible, reproducible, transparent computational biomedical research, built with collaborators worldwide. Current directions: pathogen &amp; host multiomics (BRC-Analytics), agentic AI for reproducible analysis, and large-genome assembly at scale.</p>
+<p><b>anLab</b> — the <a href="https://scholar.google.com/citations?user=wiBQ9IQAAAAJ&hl=en" target="_blank" rel="noopener" style="color:var(--acc-text)">Anton Nekrutenko</a> lab at Penn State — is the birthplace of <b>Galaxy</b>: the open platform for accessible, reproducible, transparent computational biomedical research, built with collaborators worldwide. Current directions: pathogen &amp; host multiomics (BRC-Analytics), agentic AI for reproducible analysis, and large-genome assembly at scale.</p>
 </div></div>
 <div class="statband wrap" id="stats" style="padding:0"></div>
 <div class="statnote wrap" id="statnote"></div>
