@@ -14,17 +14,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout site
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Checkout CV (private, curated source of truth)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: nekrut/CV
           token: ${{ secrets.CV_REPO_TOKEN }}
           path: cv
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
