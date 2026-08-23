@@ -774,6 +774,7 @@ footer{border-top:1px solid var(--ink);padding:28px 0 60px;display:flex;justify-
 <div class="tl" id="tl"></div><div class="axis"><span></span><div class="ticks" id="ticks"></div></div>
 <div class="lg"><span><i class="dot" style="background:#d43d2a"></i>Biological</span><span><i class="dot" style="background:#e09b2d"></i>Bio→Comp</span><span><i class="dot" style="background:#5f8fb4"></i>Comp→Bio</span><span><i class="dot" style="background:#2a5fd4"></i>Computational</span></div></section>
 <section id="products"><div class="shead"><h2>Products</h2><span class="num">02 / github.com/galaxyproject</span></div>
+<div class="mono" style="margin-bottom:14px">A collaborative effort across the usegalaxy.* consortium and the <a href="https://github.com/orgs/galaxyproject/people" target="_blank" rel="noopener" style="color:var(--acc-text)">Galaxy community</a></div>
 <div class="pgrid" id="pg"></div></section>
 <section id="pubs"><div class="shead"><h2>Publications</h2><span class="num" id="pn">03</span></div>
 <div class="mono" style="margin-bottom:14px">Every paper by the PI since __PY0__ · one cell = one paper · color = citations · click to open</div>
