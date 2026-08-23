@@ -93,7 +93,7 @@ anton = oldmap.get('nekrutenko', {})
 merged['nekrutenko'] = {'name': 'Anton Nekrutenko', 'start': 2003, 'end': None,
     'role': 'PI · Huck Chair in Genomics · Professor of Biochemistry and Molecular Biology',
     'github': anton.get('github') or '@nekrut', 'country': normcc(anton.get('country') or 'UA'),
-    'aff': anton.get('affinity') or 'BC', 'pubmed': anton.get('pubmed') or 'https://www.ncbi.nlm.nih.gov/pubmed/?term=nekrutenko'}
+    'aff': anton.get('affinity') or 'BC', 'pubmed': 'https://scholar.google.com/citations?user=wiBQ9IQAAAAJ&hl=en'}
 for k, old in oldmap.items():
     if not any(k in mk or mk in k for mk in merged):
         merged[k] = {'name': re.sub(r'\s*\([^)]*\)\s*$', '', old['name']),
@@ -771,7 +771,7 @@ footer{border-top:1px solid var(--ink);padding:28px 0 60px;display:flex;justify-
 <div class="mono" style="margin-top:14px">Previously: 11 completed federal awards (2006–2025) + Beckman Young Investigator Award · additional support from the Huck Institutes of the Life Sciences</div></section>
 </main>
 <footer><div class="wrap" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;width:100%" id="contact">
-<div><div class="logo">NEKRUTENKO<i>/</i>LAB</div><div class="mono" style="margin-top:8px">Anton Nekrutenko · Huck Chair in Genomics · Professor of Biochemistry &amp; Molecular Biology<br><a href="https://www.google.com/maps/search/?api=1&query=Wartik+Laboratory,+University+Park,+PA+16802" target="_blank" rel="noopener">505 Wartik Lab · University Park PA 16802</a> · <a href="tel:+18148269628">+1 814 826 9628</a> · <a href="mailto:aun1@psu.edu" style="color:var(--acc-text)">aun1@psu.edu</a><br>Interested in joining the lab? <a href="mailto:aun1@psu.edu?subject=Joining%20anLab" style="color:var(--acc-text)">Get in touch</a> · <a href="https://github.com/galaxyproject" style="color:var(--acc-text)">github.com/galaxyproject</a></div></div>
+<div><div class="logo">NEKRUTENKO<i>/</i>LAB</div><div class="mono" style="margin-top:8px"><a href="https://scholar.google.com/citations?user=wiBQ9IQAAAAJ&hl=en" target="_blank" rel="noopener" style="color:var(--acc-text)">Anton Nekrutenko</a> · Huck Chair in Genomics · Professor of Biochemistry &amp; Molecular Biology<br><a href="https://www.google.com/maps/search/?api=1&query=Wartik+Laboratory,+University+Park,+PA+16802" target="_blank" rel="noopener">505 Wartik Lab · University Park PA 16802</a> · <a href="tel:+18148269628">+1 814 826 9628</a> · <a href="mailto:aun1@psu.edu" style="color:var(--acc-text)">aun1@psu.edu</a><br>Interested in joining the lab? <a href="mailto:aun1@psu.edu?subject=Joining%20anLab" style="color:var(--acc-text)">Get in touch</a> · <a href="https://github.com/galaxyproject" style="color:var(--acc-text)">github.com/galaxyproject</a></div></div>
 <div class="mono">__FOOT__</div>
 </div></footer>
 <div class="tip" id="tip" role="tooltip"></div>
