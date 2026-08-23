@@ -350,11 +350,11 @@ footer{border-top:1px solid var(--ink);padding:28px 0 60px;display:flex;justify-
 <div class="cgrid" id="cg"></div>
 <div class="mono" style="margin:36px 0 10px">Public usegalaxy.* servers</div>
 <div class="wmap"><img src="world.svg" alt="World map of public Galaxy servers">
-<a class="srv" style="left:18.5%;top:43.5%" href="https://usegalaxy.org" target="_blank" rel="noopener"><i></i>usegalaxy.org</a>
-<a class="srv" style="left:25.4%;top:36.5%" href="https://usegalaxy.ca" target="_blank" rel="noopener"><i></i>.ca</a>
-<a class="srv srv-l" style="left:48.8%;top:34.5%" href="https://usegalaxy.fr" target="_blank" rel="noopener"><i></i>.fr</a>
-<a class="srv" style="left:50.2%;top:35.0%" href="https://usegalaxy.eu" target="_blank" rel="noopener"><i></i>.eu</a>
-<a class="srv srv-l" style="left:91.4%;top:91.1%" href="https://usegalaxy.org.au" target="_blank" rel="noopener"><i></i>.org.au</a>
+<a class="srv" style="left:18.5%;top:42.6%" href="https://usegalaxy.org" target="_blank" rel="noopener"><i></i>usegalaxy.org</a>
+<a class="srv" style="left:25.4%;top:35.0%" href="https://usegalaxy.ca" target="_blank" rel="noopener"><i></i>.ca</a>
+<a class="srv srv-l" style="left:48.8%;top:32.8%" href="https://usegalaxy.fr" target="_blank" rel="noopener"><i></i>.fr</a>
+<a class="srv" style="left:50.2%;top:33.4%" href="https://usegalaxy.eu" target="_blank" rel="noopener"><i></i>.eu</a>
+<a class="srv srv-l" style="left:91.4%;top:94.6%" href="https://usegalaxy.org.au" target="_blank" rel="noopener"><i></i>.org.au</a>
 </div></section>
 <section id="funding"><div class="shead"><h2>Funding</h2><span class="num">04</span></div>
 <div class="fund">
@@ -578,11 +578,11 @@ footer{padding:32px 0 70px;display:flex;justify-content:space-between;gap:20px;f
 <div class="cgrid" id="cg"></div>
 <div class="mono" style="margin:36px 0 10px">Public usegalaxy.* servers</div>
 <div class="wmap"><img src="world.svg" alt="World map of public Galaxy servers">
-<a class="srv" style="left:18.5%;top:43.5%" href="https://usegalaxy.org" target="_blank" rel="noopener"><i></i>usegalaxy.org</a>
-<a class="srv" style="left:25.4%;top:36.5%" href="https://usegalaxy.ca" target="_blank" rel="noopener"><i></i>.ca</a>
-<a class="srv srv-l" style="left:48.8%;top:34.5%" href="https://usegalaxy.fr" target="_blank" rel="noopener"><i></i>.fr</a>
-<a class="srv" style="left:50.2%;top:35.0%" href="https://usegalaxy.eu" target="_blank" rel="noopener"><i></i>.eu</a>
-<a class="srv srv-l" style="left:91.4%;top:91.1%" href="https://usegalaxy.org.au" target="_blank" rel="noopener"><i></i>.org.au</a>
+<a class="srv" style="left:18.5%;top:42.6%" href="https://usegalaxy.org" target="_blank" rel="noopener"><i></i>usegalaxy.org</a>
+<a class="srv" style="left:25.4%;top:35.0%" href="https://usegalaxy.ca" target="_blank" rel="noopener"><i></i>.ca</a>
+<a class="srv srv-l" style="left:48.8%;top:32.8%" href="https://usegalaxy.fr" target="_blank" rel="noopener"><i></i>.fr</a>
+<a class="srv" style="left:50.2%;top:33.4%" href="https://usegalaxy.eu" target="_blank" rel="noopener"><i></i>.eu</a>
+<a class="srv srv-l" style="left:91.4%;top:94.6%" href="https://usegalaxy.org.au" target="_blank" rel="noopener"><i></i>.org.au</a>
 </div></section>
 <section id="f"><div class="shead"><span class="n">04</span><h2>Funding</h2></div>
 <div class="frow">
@@ -719,7 +719,7 @@ h2{font-family:"Inter Tight";font-weight:800;font-size:clamp(22px,3vw,34px);text
 .hscale .ramp{height:10px;flex:0 0 160px;border:1px solid var(--line)}
 .memo{display:block;font-family:"Spline Sans Mono";font-size:9.5px;color:var(--acc-text);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
 .cgrid a:hover .memo{color:#ffd9c7}
-.wmap{position:relative;border:1px solid var(--line);background:var(--card);margin-top:4px}
+.wmap{position:relative;border:1px solid var(--line);background:var(--card);margin:4px auto 0;max-width:880px}
 .wmap>img{display:block;width:100%;height:auto;opacity:.9}
 .srv{position:absolute;display:flex;align-items:center;gap:6px;font-family:"Spline Sans Mono";font-size:11px;font-weight:500;color:var(--ink);white-space:nowrap;transform:translate(-8px,-8px)}
 .srv i{width:12px;height:12px;border-radius:99px;background:var(--acc);border:2px solid var(--card);outline:1px solid var(--ink);flex:0 0 12px}
@@ -777,7 +777,7 @@ footer{border-top:1px solid var(--ink);padding:28px 0 60px;display:flex;justify-
 <div class="mono" style="margin-bottom:14px">A collaborative effort across the <a href="https://galaxyproject.org/usegalaxy/" target="_blank" rel="noopener" style="color:var(--acc-text)">usegalaxy.* consortium</a> and the <a href="https://github.com/orgs/galaxyproject/people" target="_blank" rel="noopener" style="color:var(--acc-text)">Galaxy community</a></div>
 <div class="pgrid" id="pg"></div></section>
 <section id="pubs"><div class="shead"><h2>Publications</h2><span class="num" id="pn">03</span></div>
-<div class="mono" style="margin-bottom:14px">Every paper by the PI since __PY0__ · one cell = one paper · color = citations · click to open</div>
+<div class="mono" style="margin-bottom:14px">One cell = one paper · color = citations · click to open</div>
 <div class="hm"><div class="hmgrid" id="hm"></div></div>
 <div class="hscale"><span>0</span><div class="ramp" id="ramp"></div><span id="rampmax"></span><span>citations (log scale)</span></div>
 <div class="mono" style="margin:40px 0 0">Most cited</div>
@@ -786,11 +786,11 @@ footer{border-top:1px solid var(--ink);padding:28px 0 60px;display:flex;justify-
 <div class="cgrid" id="cg"></div>
 <div class="mono" style="margin:36px 0 10px">Public usegalaxy.* servers</div>
 <div class="wmap"><img src="world.svg" alt="World map of public Galaxy servers">
-<a class="srv" style="left:18.5%;top:43.5%" href="https://usegalaxy.org" target="_blank" rel="noopener"><i></i>usegalaxy.org</a>
-<a class="srv" style="left:25.4%;top:36.5%" href="https://usegalaxy.ca" target="_blank" rel="noopener"><i></i>.ca</a>
-<a class="srv srv-l" style="left:48.8%;top:34.5%" href="https://usegalaxy.fr" target="_blank" rel="noopener"><i></i>.fr</a>
-<a class="srv" style="left:50.2%;top:35.0%" href="https://usegalaxy.eu" target="_blank" rel="noopener"><i></i>.eu</a>
-<a class="srv srv-l" style="left:91.4%;top:91.1%" href="https://usegalaxy.org.au" target="_blank" rel="noopener"><i></i>.org.au</a>
+<a class="srv" style="left:18.5%;top:42.6%" href="https://usegalaxy.org" target="_blank" rel="noopener"><i></i>usegalaxy.org</a>
+<a class="srv" style="left:25.4%;top:35.0%" href="https://usegalaxy.ca" target="_blank" rel="noopener"><i></i>.ca</a>
+<a class="srv srv-l" style="left:48.8%;top:32.8%" href="https://usegalaxy.fr" target="_blank" rel="noopener"><i></i>.fr</a>
+<a class="srv" style="left:50.2%;top:33.4%" href="https://usegalaxy.eu" target="_blank" rel="noopener"><i></i>.eu</a>
+<a class="srv srv-l" style="left:91.4%;top:94.6%" href="https://usegalaxy.org.au" target="_blank" rel="noopener"><i></i>.org.au</a>
 </div></section>
 <section id="funding"><div class="shead"><h2>Funding</h2><span class="num" id="gn">05</span></div>
 <div class="mono" style="margin-bottom:14px">Lab continuously funded since 2006 · active awards below (total project costs, PD/PI + Co-I) · <a href="https://reporter.nih.gov/search/koRNhs2Wy0akJuPp5EiYXA/projects" style="color:var(--acc-text)">NIH RePORTER ↗</a> · <a href="https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=nekrutenko&ActiveAwards=true" style="color:var(--acc-text)">NSF Award Search ↗</a></div>
