@@ -38,7 +38,7 @@ for p in pubs: p['Year'] = p['year']; p['cites'] = int(p['cites'])
 pubs.sort(key=lambda p: (-p['year'], -p['cites']))
 
 # ---- people: CV tables (authoritative for names/years/roles) merged with ppl.json (github/affinity/country) ----
-ppl = json.load(open('/home/anton/git/lab_site/graph_data/ppl.json'))
+ppl = json.load(open(os.path.join(REPO, 'graph_data', 'ppl.json')))
 old_people = list(ppl['datasets'].values())[0]
 normcc = lambda c: {'UK': 'GB'}.get((c or '').strip()[:2].upper(), (c or '').strip()[:2].upper())
 skey = lambda n: re.sub(r'[^a-z]', '', unicodedata.normalize('NFD', n.lower()))
