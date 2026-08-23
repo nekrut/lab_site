@@ -349,13 +349,13 @@ footer{border-top:1px solid var(--ink);padding:28px 0 60px;display:flex;justify-
 <section id="collab"><div class="shead"><h2>The Network</h2><span class="num">03 / Key collaborators</span></div>
 <div class="cgrid" id="cg"></div>
 <div class="mono" style="margin:36px 0 10px">Public usegalaxy.* servers</div>
-<div class="wmap"><img src="world.svg" alt="World map of public Galaxy servers">
+<div class="wmapwrap"><div class="wmap"><img src="world.svg" alt="World map of public Galaxy servers">
 <a class="srv" style="left:18.5%;top:42.6%" href="https://usegalaxy.org" target="_blank" rel="noopener"><i></i>usegalaxy.org</a>
 <a class="srv" style="left:25.4%;top:35.0%" href="https://usegalaxy.ca" target="_blank" rel="noopener"><i></i>.ca</a>
 <a class="srv srv-l" style="left:48.8%;top:32.8%" href="https://usegalaxy.fr" target="_blank" rel="noopener"><i></i>.fr</a>
 <a class="srv" style="left:50.2%;top:33.4%" href="https://usegalaxy.eu" target="_blank" rel="noopener"><i></i>.eu</a>
 <a class="srv srv-l" style="left:91.4%;top:94.6%" href="https://usegalaxy.org.au" target="_blank" rel="noopener"><i></i>.org.au</a>
-</div></section>
+</div></div></section>
 <section id="funding"><div class="shead"><h2>Funding</h2><span class="num">04</span></div>
 <div class="fund">
 <div><b>NIH</b><p>National Institutes of Health — primary support.</p></div>
@@ -577,13 +577,13 @@ footer{padding:32px 0 70px;display:flex;justify-content:space-between;gap:20px;f
 <section id="c"><div class="shead"><span class="n">03</span><h2>Collaborators</h2></div>
 <div class="cgrid" id="cg"></div>
 <div class="mono" style="margin:36px 0 10px">Public usegalaxy.* servers</div>
-<div class="wmap"><img src="world.svg" alt="World map of public Galaxy servers">
+<div class="wmapwrap"><div class="wmap"><img src="world.svg" alt="World map of public Galaxy servers">
 <a class="srv" style="left:18.5%;top:42.6%" href="https://usegalaxy.org" target="_blank" rel="noopener"><i></i>usegalaxy.org</a>
 <a class="srv" style="left:25.4%;top:35.0%" href="https://usegalaxy.ca" target="_blank" rel="noopener"><i></i>.ca</a>
 <a class="srv srv-l" style="left:48.8%;top:32.8%" href="https://usegalaxy.fr" target="_blank" rel="noopener"><i></i>.fr</a>
 <a class="srv" style="left:50.2%;top:33.4%" href="https://usegalaxy.eu" target="_blank" rel="noopener"><i></i>.eu</a>
 <a class="srv srv-l" style="left:91.4%;top:94.6%" href="https://usegalaxy.org.au" target="_blank" rel="noopener"><i></i>.org.au</a>
-</div></section>
+</div></div></section>
 <section id="f"><div class="shead"><span class="n">04</span><h2>Funding</h2></div>
 <div class="frow">
 <div><b>NIH</b><span>National Institutes of Health — primary funding</span></div>
@@ -719,7 +719,8 @@ h2{font-family:"Inter Tight";font-weight:800;font-size:clamp(22px,3vw,34px);text
 .hscale .ramp{height:10px;flex:0 0 160px;border:1px solid var(--line)}
 .memo{display:block;font-family:"Spline Sans Mono";font-size:9.5px;color:var(--acc-text);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
 .cgrid a:hover .memo{color:#ffd9c7}
-.wmap{position:relative;border:1px solid var(--line);background:var(--card);margin-top:4px}
+.wmapwrap{overflow-x:auto;border:1px solid var(--line);margin-top:4px}
+.wmap{position:relative;background:var(--card);min-width:640px}
 .wmap>img{display:block;width:100%;height:auto;opacity:.9}
 .srv{position:absolute;display:flex;align-items:center;gap:6px;font-family:"Spline Sans Mono";font-size:11px;font-weight:500;color:var(--ink);white-space:nowrap;transform:translate(-8px,-8px)}
 .srv i{position:relative;width:12px;height:12px;border-radius:99px;background:var(--acc);border:2px solid var(--card);outline:1px solid var(--ink);flex:0 0 12px}
@@ -729,7 +730,7 @@ h2{font-family:"Inter Tight";font-weight:800;font-size:clamp(22px,3vw,34px);text
 @media(prefers-reduced-motion:reduce){.srv i::after{animation:none;display:none}}
 .srv:hover{color:var(--acc-text)}
 .srv-l{transform:translate(calc(-100% + 8px),-8px);flex-direction:row-reverse}
-@media(max-width:600px){.srv{font-size:8.5px}.srv i{width:9px;height:9px;flex-basis:9px}}
+
 #totop{position:fixed;right:22px;bottom:22px;background:var(--ink);color:#fff;font-family:"Spline Sans Mono";font-size:11px;padding:9px 13px;border:0;cursor:pointer;display:none;z-index:20}
 #totop:hover{background:var(--acc-text)}
 nav a.active{color:var(--acc-text)}
@@ -757,7 +758,7 @@ nav a.active{color:var(--acc-text)}
 @media(max-width:1000px){.ggrid{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.ggrid{grid-template-columns:1fr}}
 footer{border-top:1px solid var(--ink);padding:28px 0 60px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-@media(max-width:660px){header .wrap{height:auto;flex-wrap:wrap;padding:10px 16px;gap:6px}nav a{margin:0 14px 0 0;font-size:10px}}
+@media(max-width:660px){header .wrap{height:auto;flex-wrap:wrap;padding:10px 16px;gap:6px}nav{display:flex;flex-wrap:wrap;gap:4px 14px;max-width:100%}nav a{margin:0;font-size:10px}}
 @media print{header{position:static}nav,.tip,#totop{display:none}.hm{overflow:visible}.cell{print-color-adjust:exact;-webkit-print-color-adjust:exact}body{background:#fff}}
 @media(max-width:820px){.statband{grid-template-columns:1fr 1fr}.statband div{border-bottom:1px solid var(--ink)}.toplist{grid-template-columns:1fr}.tlrow{grid-template-columns:150px 1fr}.axis{grid-template-columns:150px 1fr}.fund{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr}}
 .tip{position:fixed;pointer-events:none;background:var(--ink);color:#fff;padding:8px 12px;font-size:12px;max-width:320px;z-index:50;display:none}
@@ -789,13 +790,13 @@ footer{border-top:1px solid var(--ink);padding:28px 0 60px;display:flex;justify-
 <section id="collab"><div class="shead"><h2>The Network</h2><span class="num">04 / Key collaborators</span></div>
 <div class="cgrid" id="cg"></div>
 <div class="mono" style="margin:36px 0 10px">Public usegalaxy.* servers</div>
-<div class="wmap"><img src="world.svg" alt="World map of public Galaxy servers">
+<div class="wmapwrap"><div class="wmap"><img src="world.svg" alt="World map of public Galaxy servers">
 <a class="srv" style="left:18.5%;top:42.6%" href="https://usegalaxy.org" target="_blank" rel="noopener"><i></i>usegalaxy.org</a>
 <a class="srv" style="left:25.4%;top:35.0%" href="https://usegalaxy.ca" target="_blank" rel="noopener"><i></i>.ca</a>
 <a class="srv srv-l" style="left:48.8%;top:32.8%" href="https://usegalaxy.fr" target="_blank" rel="noopener"><i></i>.fr</a>
 <a class="srv" style="left:50.2%;top:33.4%" href="https://usegalaxy.eu" target="_blank" rel="noopener"><i></i>.eu</a>
 <a class="srv srv-l" style="left:91.4%;top:94.6%" href="https://usegalaxy.org.au" target="_blank" rel="noopener"><i></i>.org.au</a>
-</div></section>
+</div></div></section>
 <section id="funding"><div class="shead"><h2>Funding</h2><span class="num" id="gn">05</span></div>
 <div class="mono" style="margin-bottom:14px">Lab continuously funded since 2006 · active awards below (total project costs, PD/PI + Co-I) · <a href="https://reporter.nih.gov/search/koRNhs2Wy0akJuPp5EiYXA/projects" style="color:var(--acc-text)">NIH RePORTER ↗</a> · <a href="https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=nekrutenko&ActiveAwards=true" style="color:var(--acc-text)">NSF Award Search ↗</a></div>
 <div class="ggrid" id="gg"></div>
@@ -822,8 +823,10 @@ document.getElementById('tl').innerHTML=D.people.map(p=>{
  const nm=p.name.replace(/\s*\([A-Z]{2}\)\s*$/,'');
  const yrs=`${p.start}–${p.now?'present':p.end}`;
  return `<div class="tlrow"><a class="nm" href="${p.pubmed}" title="${esc(p.role||nm)} · ${yrs}" aria-label="${esc(nm)}, ${esc(p.role||'lab member')}, ${yrs}">${flag(p.country)}${nm}</a><div class="tr"><div class="tlbar" style="left:${l}%;width:${w}%;background:${AC[p.aff]}"></div></div></div>`}).join('');
-const tickYrs=[];for(let y=y0;y<=y1;y++)tickYrs.push(y);
-document.getElementById('ticks').innerHTML=tickYrs.map(y=>`<span style="left:${(y-y0)/sp*100}%">${y}</span>`).join('');
+const renderTicks=()=>{const step=innerWidth<700?4:1;
+ const tickYrs=[];for(let y=y1;y>=y0;y-=step)tickYrs.unshift(y);
+ document.getElementById('ticks').innerHTML=tickYrs.map(y=>`<span style="left:${(y-y0)/sp*100}%">${y}</span>`).join('');};
+renderTicks();addEventListener('resize',renderTicks,{passive:true});
 const PRODUCTS=[
  {n:'Galaxy',img:'logos/galaxy.png',d:'The open, web-based platform for accessible, reproducible, and transparent computational research.',u:'https://galaxyproject.org'},
  {n:'Pulsar',img:'logos/pulsar.png',d:'Galaxy\u2019s distributed job execution engine — run jobs on remote compute, from clusters to clouds.',u:'https://github.com/galaxyproject/pulsar'},
