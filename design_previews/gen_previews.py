@@ -826,10 +826,10 @@ const PRODUCTS=[
  {n:'Planemo',img:'logos/planemo.png',d:'Command-line SDK for building, testing, and publishing Galaxy tools and workflows.',u:'https://github.com/galaxyproject/planemo'},
  {n:'IUC',img:'logos/iuc.svg',d:'The Intergalactic Utilities Commission — community-maintained, best-practice Galaxy tools.',u:'https://github.com/galaxyproject/tools-iuc'},
  {n:'IWC',img:'logos/iwc.png',d:'The Intergalactic Workflow Commission — curated, tested, versioned Galaxy workflows.',u:'https://iwc.galaxyproject.org/'},
- {n:'Orbit',img:'logos/orbit.svg',d:'Your AI co-scientist for Galaxy — chat, plan, run, and keep every step in a living notebook.',u:'https://galaxyproject.github.io/loom/',badge:'proposed logo'},
+ {n:'Orbit',img:'logos/orbit.svg',d:'Your AI co-scientist for Galaxy — chat, plan, run, and keep every step in a living notebook.',u:'https://galaxyproject.github.io/loom/'},
  {n:'BRC-Analytics',img:'logos/brc.svg',d:'Pathogen and host data analytics for the Bioinformatics Resource Centers — from raw reads to publication in a browser.',u:'https://brc-analytics.org'},
  {n:'GenomeArk2',img:'logos/genomeark2.svg',d:'Assembly and analysis of large eukaryotic genomes on public infrastructure, with the Vertebrate Genomes Project.',u:'https://genomeark2.org'},
- {n:'Foundry',img:'logos/foundry.svg',d:'The Galaxy Workflow Knowledge Base — casting community workflows into skills and actionable knowledge.',u:'https://galaxyproject.github.io/foundry/',badge:'proposed logo'},
+ {n:'Foundry',img:'logos/foundry.svg',d:'The Galaxy Workflow Knowledge Base — casting community workflows into skills and actionable knowledge.',u:'https://galaxyproject.github.io/foundry/'},
 ];
 document.getElementById('pg').innerHTML=PRODUCTS.map(p=>
  `<a class="pcard" href="${p.u}" target="_blank" rel="noopener"><span class="plogo"><img src="${p.img}" alt="${p.n} logo"></span>
